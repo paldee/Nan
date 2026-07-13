@@ -1,6 +1,7 @@
 import { createServer } from "node:http";
 import { readFile } from "node:fs/promises";
 import { extname, join, normalize } from "node:path";
+import { fileURLToPath } from "node:url";
 
 const root = process.cwd();
 const publicRoot = join(root, "public");
@@ -164,7 +165,7 @@ async function handleStatic(req, res) {
 
 await loadLocalEnv();
 
-createServer(async (req, res) => {
+export async function appHandler(req, res) {
   try {
     if (req.method === "GET" && req.url === "/api/weather") {
       const weather = await fetchNanWeather();
@@ -189,6 +190,10 @@ createServer(async (req, res) => {
     console.error(error);
     send(res, 500, JSON.stringify({ error: error.message }));
   }
-}).listen(port, () => {
-  console.log(`Nan Beyond running at http://localhost:${port}`);
-});
+}
+
+if (process.argv[1] === fileURLToPath(import.meta.url)) {
+  createServer(appHandler).listen(port, () => {
+    console.log(`Nan Beyond running at http://localhost:${port}`);
+  });
+}

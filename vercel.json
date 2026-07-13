@@ -1,0 +1,11 @@
+{
+  "cleanUrls": true,
+  "rewrites": [
+    { "source": "/api/(.*)", "destination": "/api/index.mjs" },
+    { "source": "/your-plan.html", "destination": "/public/pages/your-plan.html" },
+    { "source": "/journey.html", "destination": "/public/pages/journey.html" },
+    { "source": "/stories.html", "destination": "/public/pages/stories.html" },
+    { "source": "/UI.html", "destination": "/public/index.html" },
+    { "source": "/((?!api/).*)", "destination": "/public/$1" }
+  ]
+}
