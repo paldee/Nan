@@ -1,0 +1,378 @@
+﻿<!DOCTYPE html>
+<html class="light scroll-smooth" lang="en">
+<head>
+        <meta charset="utf-8" />
+        <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+        <title>Nan Beyond AI - Emerald Journey</title>
+        <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;700&amp;family=Playfair+Display:wght@600;700&amp;display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet" />
+        <script id="tailwind-config">
+                tailwind.config = {
+                        darkMode: "class",
+                        theme: {
+                                extend: {
+                                        colors: {
+                                                "error-container": "#ffdad6",
+                                                "surface-dim": "#dbdad5",
+                                                "on-surface": "#1b1c19",
+                                                "on-secondary-fixed-variant": "#623f18",
+                                                "on-primary-fixed": "#052013",
+                                                "primary-container": "#1e392a",
+                                                "surface-container-lowest": "#ffffff",
+                                                "surface-tint": "#496553",
+                                                "secondary-container": "#ffca98",
+                                                "surface-variant": "#e4e2dd",
+                                                "on-secondary": "#ffffff",
+                                                "on-surface-variant": "#424843",
+                                                "inverse-surface": "#30312e",
+                                                "outline": "#727973",
+                                                "on-tertiary-fixed": "#131f0d",
+                                                "tertiary": "#162210",
+                                                "error": "#ba1a1a",
+                                                "on-tertiary": "#ffffff",
+                                                "on-error-container": "#93000a",
+                                                "on-secondary-fixed": "#2c1600",
+                                                "on-primary-container": "#85a38f",
+                                                "on-tertiary-fixed-variant": "#3e4a36",
+                                                "inverse-on-surface": "#f2f1ec",
+                                                "surface-container": "#f0eee9",
+                                                "surface-container-high": "#eae8e3",
+                                                "surface-bright": "#fbf9f4",
+                                                "on-tertiary-container": "#92a087",
+                                                "on-primary-fixed-variant": "#314d3c",
+                                                "primary": "#072316",
+                                                "tertiary-container": "#2b3724",
+                                                "surface-container-highest": "#e4e2dd",
+                                                "surface-container-low": "#f5f3ee",
+                                                "on-background": "#1b1c19",
+                                                "primary-fixed": "#cbead4",
+                                                "tertiary-fixed": "#d8e7cb",
+                                                "on-primary": "#ffffff",
+                                                "tertiary-fixed-dim": "#bccbb0",
+                                                "primary-fixed-dim": "#afceb9",
+                                                "outline-variant": "#c2c8c1",
+                                                "on-error": "#ffffff",
+                                                "secondary": "#7d562d",
+                                                "inverse-primary": "#afceb9",
+                                                "secondary-fixed": "#ffdcbd",
+                                                "secondary-fixed-dim": "#f0bd8b",
+                                                "background": "#fbf9f4",
+                                                "on-secondary-container": "#7a532a",
+                                                "surface": "#fbf9f4"
+                                        },
+                                        borderRadius: {
+                                                DEFAULT: "0.25rem",
+                                                lg: "0.5rem",
+                                                xl: "0.75rem",
+                                                full: "9999px"
+                                        },
+                                        spacing: {
+                                                "margin-mobile": "20px",
+                                                gutter: "24px",
+                                                "margin-desktop": "64px",
+                                                "container-max": "1280px",
+                                                "section-gap": "120px",
+                                                unit: "8px",
+                                                safe: "env(safe-area-inset-bottom, 20px)"
+                                        },
+                                        fontFamily: {
+                                                "display-lg": ["Playfair Display"],
+                                                "headline-md": ["Playfair Display"],
+                                                "headline-sm": ["Playfair Display"],
+                                                "display-lg-mobile": ["Playfair Display"],
+                                                "label-caps": ["Hanken Grotesk"],
+                                                "body-lg": ["Hanken Grotesk"],
+                                                "body-md": ["Hanken Grotesk"],
+                                                "data-mono": ["Hanken Grotesk"]
+                                        },
+                                        fontSize: {
+                                                "display-lg": ["64px", { lineHeight: "1.1", letterSpacing: "-0.02em", fontWeight: "700" }],
+                                                "headline-md": ["32px", { lineHeight: "1.3", fontWeight: "600" }],
+                                                "headline-sm": ["24px", { lineHeight: "1.4", fontWeight: "600" }],
+                                                "display-lg-mobile": ["40px", { lineHeight: "1.2", fontWeight: "700" }],
+                                                "label-caps": ["12px", { lineHeight: "1", letterSpacing: "0.1em", fontWeight: "700" }],
+                                                "body-lg": ["18px", { lineHeight: "1.6", fontWeight: "400" }],
+                                                "body-md": ["16px", { lineHeight: "1.6", fontWeight: "400" }],
+                                                "data-mono": ["14px", { lineHeight: "1.4", fontWeight: "500" }]
+                                        }
+                                }
+                        }
+                }
+        </script>
+        <style>
+                html { scroll-behavior: smooth; }
+                body { font-family: 'Hanken Grotesk', sans-serif; overflow-y: auto; }
+                h1, h2, h3, h4, h5, h6 { font-family: 'Playfair Display', serif; }
+                section[id] { scroll-margin-top: 88px; }
+                ::-webkit-scrollbar { width: 8px; }
+                ::-webkit-scrollbar-track { background: transparent; }
+                ::-webkit-scrollbar-thumb { background-color: rgba(114, 121, 115, 0.3); border-radius: 20px; }
+                .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+                .material-symbols-outlined.fill-icon { font-variation-settings: 'FILL' 1; }
+                .timeline-line::before { content: ''; position: absolute; top: 24px; bottom: -40px; left: 20px; width: 1px; background-color: #c2c8c1; z-index: 0; }
+                @media (min-width: 768px) { .timeline-line::before { left: 50%; transform: translateX(-50%); } }
+                .glass-overlay, .glass-panel { backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); }
+                .glass-panel { background: rgba(255, 255, 255, 0.7); border: 1px solid rgba(0, 0, 0, 0.05); }
+                .hide-scrollbar::-webkit-scrollbar { display: none; }
+                .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+                .season-card:hover .season-overlay { opacity: 1; }
+                .season-card:hover .season-title { transform: translateY(-10px); }
+                .ai-shimmer { background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent); background-size: 200% 100%; animation: shimmer 2s infinite linear; }
+                @keyframes shimmer { 0% { background-position: -200% 0; } 100% { background-position: 200% 0; } }
+                body { opacity: 0; transform: translateY(8px); transition: opacity 220ms ease, transform 220ms ease; }
+                body.page-ready { opacity: 1; transform: translateY(0); }
+                body.page-leaving { opacity: 0; transform: translateY(-6px); }
+                main { width: 100%; }
+                .page-shell { width: min(100%, 1280px); margin-inline: auto; }
+        </style>
+</head>
+<body class="bg-background text-on-background font-body-md min-h-screen antialiased overflow-x-hidden overflow-y-auto selection:bg-primary-fixed selection:text-on-primary-fixed pb-24 md:pb-0 scroll-smooth">
+        <header
+                class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4 bg-background/80 dark:bg-background/80 backdrop-blur-xl bg-background/70">
+                <a class="font-label-caps text-sm md:text-base text-primary dark:text-primary-fixed uppercase tracking-wider hover:text-primary-container transition-colors" href="../index.html">Nan Beyond</a>
+                <nav class="hidden md:flex gap-6 items-center font-label-caps text-sm uppercase tracking-wider">
+                        <a class="text-primary dark:text-primary-fixed font-bold border-b-2 border-primary dark:border-primary-fixed pb-1 active:scale-95 duration-200"
+                                href="../index.html">ฤดูกาล</a>
+                        <a class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed transition-colors"
+                                href="your-plan.html">แผนเที่ยว</a>
+                        <a class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed transition-colors"
+                                href="stories.html">เรื่องเล่า</a>
+                </nav>
+                <div class="flex items-center gap-4 text-primary dark:text-primary-fixed"><div class="hidden lg:flex items-center gap-2 text-on-surface-variant font-data-mono text-data-mono"><span id="weather-header-icon" class="material-symbols-outlined text-primary text-[18px]">rainy</span><span id="weather-header-label">อากาศน่าน</span></div>
+                        
+                </div>
+        </header>
+        <main class="min-h-screen overflow-y-auto">
+                <section id="journey" class="pt-32 pb-32 md:pb-24 max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+                <!-- Header Section -->
+                <section class="mb-16 md:mb-section-gap text-center max-w-3xl mx-auto">
+                        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary-fixed/20 mb-6">
+                                <span class="material-symbols-outlined text-secondary text-[16px]">eco</span>
+                                <span class="font-label-caps text-label-caps text-secondary uppercase tracking-wider">แผนที่สร้างให้คุณ</span>
+                        </div>
+                        <h1
+                                class="font-display-lg-mobile text-display-lg-mobile md:font-display-lg md:text-display-lg text-primary mb-6">
+                                แผนเที่ยวน่าน 3 วันในฤดูเขียว
+                        </h1>
+                        <p class="font-body-lg text-body-lg text-on-surface-variant">
+                                เส้นทางที่ปรับตามฤดูกาลและสภาพอากาศจริง ผสานธรรมชาติสีเขียว วิถีชุมชน และมรดกวัฒนธรรมของน่าน
+                        </p>
+                </section>
+                <div id="generated-trip"></div>
+                <!-- Vertical Storytelling Timeline -->
+                <section class="relative timeline-line">
+                        <!-- Day 1 Header -->
+                        <div class="relative z-10 flex items-center gap-4 mb-12 md:justify-center">
+                                <div
+                                        class="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-on-primary font-headline-sm text-headline-sm">
+                                        1</div>
+                                <h2 class="font-headline-md text-headline-md text-on-surface">Arrival &amp; The Valleys
+                                </h2>
+                        </div>
+                        <!-- Stop 1 -->
+                        <article class="relative z-10 mb-24 md:grid md:grid-cols-12 md:gap-gutter items-center">
+                                <!-- Timeline Node Marker (Mobile Left, Desktop Center) -->
+                                <div
+                                        class="absolute left-[-4px] md:left-[50%] md:-translate-x-1/2 top-10 w-12 h-12 rounded-full bg-surface-container flex items-center justify-center border-4 border-background z-20">
+                                        <span class="material-symbols-outlined text-primary">location_on</span>
+                                </div>
+                                <!-- Content Card (Left on Desktop) -->
+                                <div class="pl-14 md:pl-0 md:col-span-5 md:text-right">
+                                        <div
+                                                class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-surface-variant text-on-surface-variant mb-4">
+                                                <span class="font-label-caps text-label-caps uppercase tracking-wider">10:00
+                                                        AM</span>
+                                        </div>
+                                        <h3 class="font-headline-sm text-headline-sm text-primary mb-2">Sapan Rice
+                                                Terraces</h3>
+                                        <!-- AI Insight Glass Card -->
+                                        <div
+                                                class="mt-6 text-left inline-block backdrop-blur-xl bg-surface-container-highest/60 border border-outline-variant/30 rounded-2xl p-5 shadow-sm">
+                                                <div class="flex items-center gap-2 mb-2">
+                                                        <span
+                                                                class="material-symbols-outlined text-secondary text-[18px]">auto_awesome</span>
+                                                        <span
+                                                                class="font-label-caps text-label-caps text-secondary uppercase tracking-wider">Why
+                                                                Now</span>
+                                                </div>
+                                                <p class="font-body-md text-body-md text-on-surface">
+                                                        Live weather and August seasonality point toward Sapan now: the rice fields are at their most vibrant emerald green after recent rains. The morning mist
+                                                        creates an ethereal atmosphere perfect for photography.
+                                                </p>
+                                        </div>
+                                </div>
+                                <!-- Image (Right on Desktop) -->
+                                <div class="pl-14 mt-6 md:mt-0 md:pl-0 md:col-start-7 md:col-span-6">
+                                        <div
+                                                class="rounded-[24px] overflow-hidden shadow-sm aspect-[4/3] relative group">
+                                                <img alt="Sapan Rice Terraces"
+                                                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                                                        data-alt="An immersive, eye-level shot of the vibrant green rice terraces in Sapan village, Nan. A narrow, muddy path winds through the fields, leading towards traditional wooden stilt houses in the distance. The sky is overcast with heavy, dramatic rain clouds, casting a soft, even light over the landscape. The image evokes a sense of deep tranquility and connection to nature, fitting a premium, authentic travel aesthetic with high contrast and saturated natural colors."
+                                                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuAR5rgtBBksw-MRlcaqcMA37hGuB1MWXFI7Qwjs0K3cz2oPFWoie82KACEkofqk6Do6-r15IFXlWScwvVWVlZsSB-JDGoBGVXUd2mxCORnfg06sHEcS8NqLQGXFErOG9vCMYZEpEjcaN2KXwq5JXyi4ui9cW1XCsQ9yuI5nxNUHrUvLmuMjpfZk6WVfZrhwdEVPPxEX3KeW1to7hQqtEORnVqlCA_ShkS8h7muU988uUZWxxQDb0v72_qqupliWA9p3TWKmhE6mn-M" />
+                                                <div
+                                                        class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-80">
+                                                </div>
+                                                <div class="absolute bottom-4 left-4 right-4">
+                                                        <p class="font-body-md text-body-md text-on-primary">
+                                                                <span class="font-bold">Local Insight:</span> Sapan
+                                                                remains an agrarian community where traditional 'เธฅเธเนเธเธ'
+                                                                (community harvesting) is still occasionally practiced
+                                                                during the green season.
+                                                        </p>
+                                                </div>
+                                        </div>
+                                </div>
+                        </article>
+                        <!-- Stop 2 -->
+                        <article class="relative z-10 mb-24 md:grid md:grid-cols-12 md:gap-gutter items-center">
+                                <!-- Timeline Node Marker -->
+                                <div
+                                        class="absolute left-[-4px] md:left-[50%] md:-translate-x-1/2 top-10 w-12 h-12 rounded-full bg-surface-container flex items-center justify-center border-4 border-background z-20">
+                                        <span class="material-symbols-outlined text-secondary">diamond</span>
+                                </div>
+                                <!-- Image (Left on Desktop - Alternating layout) -->
+                                <div class="pl-14 md:pl-0 md:col-span-6 order-2 md:order-1 mt-6 md:mt-0">
+                                        <div
+                                                class="rounded-[24px] overflow-hidden shadow-sm aspect-[4/3] relative group">
+                                                <img alt="Bo Kluea Ancient Salt Wells"
+                                                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                                                        data-alt="A close-up, highly textured photograph of the ancient rock salt boiling process in Bo Kluea, Nan. Steam rises organically from large, rustic woven baskets suspended over a crackling wood fire. The scene is illuminated by the warm, flickering glow of the flames against the dark, earthy interior of a traditional wooden hut. The image conveys a rich sense of history, local craftsmanship, and authenticity, composed with a shallow depth of field to highlight the tactile details of the salt and woven textures."
+                                                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuBo-zb8UPT2a-A--IKK1vBf94V506sSQBL-eu9ueVL0aIui9gkHIPmcMV5cqhBBP95oNxLrIsa57Yh53a9GHmp1kaD19lj6Lomx0iAY8X3PUJJ_ammQRn9lT33jBRYPcwWZipkE_6aNKxa5r4STZK02LtiTscXikJRNPAkkyKxEwXhvzhB9doqTgj7Azh68Y1HpnkagEEX-UCGTCgUH70REUX-ag-SJGEceYAMkSajIaasV_h9FyOeTA11DLaZM2NHeOLPnOQfzzSE" />
+                                                <!-- Hidden Gem Badge over Image -->
+                                                <div
+                                                        class="absolute top-4 left-4 inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-secondary text-on-secondary backdrop-blur-md shadow-sm">
+                                                        <span
+                                                                class="material-symbols-outlined text-[16px]">visibility</span>
+                                                        <span
+                                                                class="font-label-caps text-label-caps uppercase tracking-wider">Hidden
+                                                                Gem</span>
+                                                </div>
+                                        </div>
+                                </div>
+                                <!-- Content Card (Right on Desktop) -->
+                                <div class="pl-14 md:pl-0 md:col-start-8 md:col-span-5 order-1 md:order-2">
+                                        <div
+                                                class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-surface-variant text-on-surface-variant mb-4">
+                                                <span class="font-label-caps text-label-caps uppercase tracking-wider">2:30
+                                                        PM</span>
+                                        </div>
+                                        <h3 class="font-headline-sm text-headline-sm text-primary mb-2">Bo Kluea Ancient
+                                                Salt Wells</h3>
+                                        <p class="font-body-md text-body-md text-on-surface-variant mt-4">
+                                                <span class="font-bold text-on-surface">Local Insight:</span> One of the
+                                                only places in the world where salt is extracted from mountain wells.
+                                                The traditional boiling method over wood fires has remained unchanged
+                                                for 800 years.
+                                        </p>
+                                        <!-- AI Insight Glass Card -->
+                                        <div
+                                                class="mt-6 text-left inline-block backdrop-blur-xl bg-surface-container-highest/60 border border-outline-variant/30 rounded-2xl p-5 shadow-sm w-full">
+                                                <div class="flex items-center gap-2 mb-2">
+                                                        <span
+                                                                class="material-symbols-outlined text-secondary text-[18px]">auto_awesome</span>
+                                                        <span
+                                                                class="font-label-caps text-label-caps text-secondary uppercase tracking-wider">Why
+                                                                Now</span>
+                                                </div>
+                                                <p class="font-body-md text-body-md text-on-surface">
+                                                        The cooler, damp weather makes observing the hot steam and open
+                                                        fires of the salt boiling process much more comfortable and
+                                                        atmospheric today.
+                                                </p>
+                                        </div>
+                                </div>
+                        </article>
+                </section>
+        </section>
+        </main>
+        <nav
+                class="md:hidden fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-safe h-20 bg-background/90 dark:bg-background/90 backdrop-blur-xl border-t border-outline-variant/20 rounded-t-xl">
+                <a class="flex flex-col items-center justify-center text-primary dark:text-primary-fixed-dim bg-primary-fixed/20 rounded-xl px-4 py-2 hover:bg-surface-container-low transition-all"
+                        href="../index.html">
+                        <span class="material-symbols-outlined mb-1">explore</span>
+                        <span class="font-label-caps text-label-caps">ฤดูกาล</span>
+                </a>
+                <a class="flex flex-col items-center justify-center text-on-surface-variant/70 dark:text-surface-variant/70 px-4 py-2 hover:bg-surface-container-low transition-all"
+                        href="your-plan.html">
+                        <span class="material-symbols-outlined mb-1">auto_awesome</span>
+                        <span class="font-label-caps text-label-caps">วางแผน</span>
+                </a>
+                <a class="flex flex-col items-center justify-center text-on-surface-variant/70 dark:text-surface-variant/70 px-4 py-2 hover:bg-surface-container-low transition-all"
+                        href="your-plan.html">
+                        <span class="material-symbols-outlined mb-1">map</span>
+                        <span class="font-label-caps text-label-caps">แผน</span>
+                </a>
+                <a class="flex flex-col items-center justify-center text-on-surface-variant/70 dark:text-surface-variant/70 px-4 py-2 hover:bg-surface-container-low transition-all"
+                        href="stories.html">
+                        <span class="material-symbols-outlined mb-1">menu_book</span><span class="font-label-caps text-label-caps">เรื่องเล่า</span>
+                </a>
+        </nav>
+        <script>
+        const WEATHER_IMAGES = {
+                rain: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCKDhyiN5DjiaBIMSR34rOLIDu-mKNJ70YSiYrGJBzbRyL2yXZiN7sFYU5R8Fmk6EBmWV8Q7yoLso7XClAcEANU4hgFd89YVdrBPeOrllVh6xTkGNz3VCdzJzRgnhVpkbAs4GizoiZioJlQz08RhjnDRDKnrwZ-YpjyAjGvNQ-Is-Ael37tnmpj-lfaVTDRjYLb2pu68MJPvzzlDHDYKnhi-Rjwd9XYdmZrrjhKgcvTASN7WnWlt7T2hcCxSKm94AOrZ406O-NH96U',
+                cloudy: 'https://lh3.googleusercontent.com/aida-public/AB6AXuA2LNfTLC7nkNkgzAfwam5AM3J5nJTctMgDevP9hg8Z4tcAqzCwBk_cRGs0ldC9R6M7FjmBIliDNQXsTzVCbNLFY6dxT7fJ5Bm_D4K5UJ06rx2nnaQOhV-vicQoPRUasnkZjF1YOoUbzcy6GwHc4DY9vtm-yJK1j6L6vcDhNyvh4B0vEKqtUOcjqKLW_Hfk3YXtq9jVta4TNDXITs9DZG5UANF1i4IxDCtKD9Y8PYlxWwnPT3s4uG-FsLUFmZxVf41_C6-YK9WXMng',
+                clear: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBEKEFeUSN3KY4efwhru4RUcYSkPTs6y4lGm32XkUVELtLJaGfdkXPOo_TCQacaAivbuSb-IPwDmuIcdc4mlqf0LOdNXkQLVIrPUtM4Mt-lcXTMQyKFo3vd3FOXz14dYJOLVTIJ9cXri8NNGoPqvcR9UTyPqdlh52AlzWlyISPY_2Z4OXWAPfh-MHDvDMvkKeLeagVuXGQXEFTvJ5f14AsS7cVrZmPPWF2N1maL0ncF3PY1vYJmYeszaYhb-ZZMMBcHDNUMk5Wp1qI',
+                night: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBqlaoTrcO96G8S7svgj75vs0_ipZku6_ZcKDd1alqM-HXqSOA6q7u0tEGtVtuFD3yCyjqkG6lxDadKiStwFTG0YtvlsIcRL9RWDy0VzmEo2EswWcZIYkRCAvUCSIAYZAYMkE1BWsccabuSFXA6KC9owjJyYDt9ptAfXvdwzp_XeIJnn_4A79huccjtc7UoIOAmrSs8eqdfLQVD5DDoglTL2TnFZHBc2QkjIfQU0ccYUPbwcJfFBilVkeg35gDIUN-2rmkfS0945_8'
+        };
+        const WEATHER_COPY = {
+                rain: { icon: 'rainy', label: 'ฝนกำลังมาเยือนน่าน' },
+                cloudy: { icon: 'cloud', label: 'ท้องฟ้าน่านมีเมฆ' },
+                clear: { icon: 'clear_day', label: 'แสงใสของน่าน' },
+                night: { icon: 'nights_stay', label: 'น่านยามค่ำ' }
+        };
+        function classifyWeather(current) {
+                const code = Number(current.weather_code);
+                const rain = Number(current.rain || 0);
+                const precipitation = Number(current.precipitation || 0);
+                const cloudCover = Number(current.cloud_cover || 0);
+                if (Number(current.is_day) === 0) return 'night';
+                if (rain > 0 || precipitation > 0 || [51, 53, 55, 61, 63, 65, 66, 67, 80, 81, 82, 95, 96, 99].includes(code)) return 'rain';
+                if ([1, 2, 3, 45, 48].includes(code) || cloudCover >= 55) return 'cloudy';
+                return 'clear';
+        }
+        function applyWeather(kind, current = null) {
+                const copy = WEATHER_COPY[kind] || WEATHER_COPY.rain;
+                const image = WEATHER_IMAGES[kind] || WEATHER_IMAGES.rain;
+                const temp = current && Number.isFinite(Number(current.temperature_2m)) ? ` · ${Math.round(current.temperature_2m)}°C` : '';
+                const wind = current && Number.isFinite(Number(current.wind_speed_10m)) ? ` · Wind ${Math.round(current.wind_speed_10m)} km/h` : '';
+                const fullLabel = `${copy.label}${temp}${wind}`;
+                const heroImage = document.getElementById('weather-hero-image');
+                const heroIcon = document.getElementById('weather-icon');
+                const heroLabel = document.getElementById('weather-label');
+                const headerIcon = document.getElementById('weather-header-icon');
+                const headerLabel = document.getElementById('weather-header-label');
+                if (heroImage) heroImage.src = image;
+                if (heroIcon) heroIcon.textContent = copy.icon;
+                if (heroLabel) heroLabel.textContent = fullLabel;
+                if (headerIcon) headerIcon.textContent = copy.icon;
+                if (headerLabel) headerLabel.textContent = fullLabel;
+        }
+        async function loadNanWeather() {
+                const url = 'https://api.open-meteo.com/v1/forecast?latitude=18.7756&longitude=100.7730&current=temperature_2m,relative_humidity_2m,apparent_temperature,is_day,precipitation,rain,weather_code,cloud_cover,wind_speed_10m&timezone=Asia%2FBangkok';
+                try {
+                        const response = await fetch(url, { cache: 'no-store' });
+                        if (!response.ok) throw new Error(`Weather request failed: ${response.status}`);
+                        const data = await response.json();
+                        const current = data.current || {};
+                        applyWeather(classifyWeather(current), current);
+                } catch (error) {
+                        console.warn('Using fallback Nan weather background.', error);
+                        applyWeather('rain');
+                }
+        }
+        loadNanWeather();
+</script>
+        
+        <script src="../assets/js/app.js" defer></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+

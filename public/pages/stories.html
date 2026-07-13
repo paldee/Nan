@@ -1,0 +1,404 @@
+﻿<!DOCTYPE html>
+<html class="light scroll-smooth" lang="en">
+<head>
+        <meta charset="utf-8" />
+        <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+        <title>Nan Beyond AI - Twelve Months</title>
+        <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;700&amp;family=Playfair+Display:wght@600;700&amp;display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet" />
+        <script id="tailwind-config">
+                tailwind.config = {
+                        darkMode: "class",
+                        theme: {
+                                extend: {
+                                        colors: {
+                                                "error-container": "#ffdad6",
+                                                "surface-dim": "#dbdad5",
+                                                "on-surface": "#1b1c19",
+                                                "on-secondary-fixed-variant": "#623f18",
+                                                "on-primary-fixed": "#052013",
+                                                "primary-container": "#1e392a",
+                                                "surface-container-lowest": "#ffffff",
+                                                "surface-tint": "#496553",
+                                                "secondary-container": "#ffca98",
+                                                "surface-variant": "#e4e2dd",
+                                                "on-secondary": "#ffffff",
+                                                "on-surface-variant": "#424843",
+                                                "inverse-surface": "#30312e",
+                                                "outline": "#727973",
+                                                "on-tertiary-fixed": "#131f0d",
+                                                "tertiary": "#162210",
+                                                "error": "#ba1a1a",
+                                                "on-tertiary": "#ffffff",
+                                                "on-error-container": "#93000a",
+                                                "on-secondary-fixed": "#2c1600",
+                                                "on-primary-container": "#85a38f",
+                                                "on-tertiary-fixed-variant": "#3e4a36",
+                                                "inverse-on-surface": "#f2f1ec",
+                                                "surface-container": "#f0eee9",
+                                                "surface-container-high": "#eae8e3",
+                                                "surface-bright": "#fbf9f4",
+                                                "on-tertiary-container": "#92a087",
+                                                "on-primary-fixed-variant": "#314d3c",
+                                                "primary": "#072316",
+                                                "tertiary-container": "#2b3724",
+                                                "surface-container-highest": "#e4e2dd",
+                                                "surface-container-low": "#f5f3ee",
+                                                "on-background": "#1b1c19",
+                                                "primary-fixed": "#cbead4",
+                                                "tertiary-fixed": "#d8e7cb",
+                                                "on-primary": "#ffffff",
+                                                "tertiary-fixed-dim": "#bccbb0",
+                                                "primary-fixed-dim": "#afceb9",
+                                                "outline-variant": "#c2c8c1",
+                                                "on-error": "#ffffff",
+                                                "secondary": "#7d562d",
+                                                "inverse-primary": "#afceb9",
+                                                "secondary-fixed": "#ffdcbd",
+                                                "secondary-fixed-dim": "#f0bd8b",
+                                                "background": "#fbf9f4",
+                                                "on-secondary-container": "#7a532a",
+                                                "surface": "#fbf9f4"
+                                        },
+                                        borderRadius: {
+                                                DEFAULT: "0.25rem",
+                                                lg: "0.5rem",
+                                                xl: "0.75rem",
+                                                full: "9999px"
+                                        },
+                                        spacing: {
+                                                "margin-mobile": "20px",
+                                                gutter: "24px",
+                                                "margin-desktop": "64px",
+                                                "container-max": "1280px",
+                                                "section-gap": "120px",
+                                                unit: "8px",
+                                                safe: "env(safe-area-inset-bottom, 20px)"
+                                        },
+                                        fontFamily: {
+                                                "display-lg": ["Playfair Display"],
+                                                "headline-md": ["Playfair Display"],
+                                                "headline-sm": ["Playfair Display"],
+                                                "display-lg-mobile": ["Playfair Display"],
+                                                "label-caps": ["Hanken Grotesk"],
+                                                "body-lg": ["Hanken Grotesk"],
+                                                "body-md": ["Hanken Grotesk"],
+                                                "data-mono": ["Hanken Grotesk"]
+                                        },
+                                        fontSize: {
+                                                "display-lg": ["64px", { lineHeight: "1.1", letterSpacing: "-0.02em", fontWeight: "700" }],
+                                                "headline-md": ["32px", { lineHeight: "1.3", fontWeight: "600" }],
+                                                "headline-sm": ["24px", { lineHeight: "1.4", fontWeight: "600" }],
+                                                "display-lg-mobile": ["40px", { lineHeight: "1.2", fontWeight: "700" }],
+                                                "label-caps": ["12px", { lineHeight: "1", letterSpacing: "0.1em", fontWeight: "700" }],
+                                                "body-lg": ["18px", { lineHeight: "1.6", fontWeight: "400" }],
+                                                "body-md": ["16px", { lineHeight: "1.6", fontWeight: "400" }],
+                                                "data-mono": ["14px", { lineHeight: "1.4", fontWeight: "500" }]
+                                        }
+                                }
+                        }
+                }
+        </script>
+        <style>
+                html { scroll-behavior: smooth; }
+                body { font-family: 'Hanken Grotesk', sans-serif; overflow-y: auto; }
+                h1, h2, h3, h4, h5, h6 { font-family: 'Playfair Display', serif; }
+                section[id] { scroll-margin-top: 88px; }
+                ::-webkit-scrollbar { width: 8px; }
+                ::-webkit-scrollbar-track { background: transparent; }
+                ::-webkit-scrollbar-thumb { background-color: rgba(114, 121, 115, 0.3); border-radius: 20px; }
+                .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+                .material-symbols-outlined.fill-icon { font-variation-settings: 'FILL' 1; }
+                .timeline-line::before { content: ''; position: absolute; top: 24px; bottom: -40px; left: 20px; width: 1px; background-color: #c2c8c1; z-index: 0; }
+                @media (min-width: 768px) { .timeline-line::before { left: 50%; transform: translateX(-50%); } }
+                .glass-overlay, .glass-panel { backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); }
+                .glass-panel { background: rgba(255, 255, 255, 0.7); border: 1px solid rgba(0, 0, 0, 0.05); }
+                .hide-scrollbar::-webkit-scrollbar { display: none; }
+                .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+                .season-card:hover .season-overlay { opacity: 1; }
+                .season-card:hover .season-title { transform: translateY(-10px); }
+                .ai-shimmer { background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent); background-size: 200% 100%; animation: shimmer 2s infinite linear; }
+                @keyframes shimmer { 0% { background-position: -200% 0; } 100% { background-position: 200% 0; } }
+                body { opacity: 0; transform: translateY(8px); transition: opacity 220ms ease, transform 220ms ease; }
+                body.page-ready { opacity: 1; transform: translateY(0); }
+                body.page-leaving { opacity: 0; transform: translateY(-6px); }
+                main { width: 100%; }
+                .page-shell { width: min(100%, 1280px); margin-inline: auto; }
+        </style>
+</head>
+<body class="bg-background text-on-background font-body-md min-h-screen antialiased overflow-x-hidden overflow-y-auto selection:bg-primary-fixed selection:text-on-primary-fixed pb-24 md:pb-0 scroll-smooth">
+        <header
+                class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4 bg-background/80 dark:bg-background/80 backdrop-blur-xl bg-background/70">
+                <a class="font-label-caps text-sm md:text-base text-primary dark:text-primary-fixed uppercase tracking-wider hover:text-primary-container transition-colors" href="../index.html">Nan Beyond</a>
+                <nav class="hidden md:flex gap-6 items-center font-label-caps text-sm uppercase tracking-wider">
+                        <a class="text-primary dark:text-primary-fixed font-bold border-b-2 border-primary dark:border-primary-fixed pb-1 active:scale-95 duration-200"
+                                href="../index.html">ฤดูกาล</a>
+                        <a class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed transition-colors"
+                                href="your-plan.html">แผนเที่ยว</a>
+                        <a class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed transition-colors"
+                                href="stories.html">เรื่องเล่า</a>
+                </nav>
+                <div class="flex items-center gap-4 text-primary dark:text-primary-fixed"><div class="hidden lg:flex items-center gap-2 text-on-surface-variant font-data-mono text-data-mono"><span id="weather-header-icon" class="material-symbols-outlined text-primary text-[18px]">rainy</span><span id="weather-header-label">อากาศน่าน</span></div>
+                        
+                </div>
+        </header>
+        <main class="min-h-screen overflow-y-auto">
+                <section id="stories" class="pt-32 overflow-y-auto pb-32 md:pb-12 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+                <!-- Header Section -->
+                <section class="mb-section-gap text-center md:text-left mt-12 md:mt-24">
+                        <h1
+                                class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-primary mb-4 md:w-2/3">
+                                น่าน 12 เดือน: คุณอยากพบน่านในจังหวะไหน
+                        </h1>
+                        <p class="font-body-lg text-body-lg text-on-surface-variant md:w-1/2">
+                                สำรวจบรรยากาศที่เปลี่ยนไปในแต่ละเดือน ตั้งแต่ลมหนาว ดอกไม้ วัฒนธรรมเมืองเก่า นาข้าวสีเขียว ไปจนถึงทะเลหมอกปลายปี
+                        </p>
+                </section>
+                <!-- Seasonal Grid / Bento Layout -->
+                <section class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-gutter auto-rows-[400px]">
+                        <!-- Month 1: Jan -->
+                        <div
+                                class="season-card relative rounded-[24px] overflow-hidden group cursor-pointer border border-outline-variant/20 shadow-sm md:col-span-1 row-span-1">
+                                <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
+                                        data-alt="A cool, crisp morning in Nan, Thailand during January. Soft winter sunlight filtering through tall pine trees. A serene, minimalist aesthetic with a color palette of deep greens, muted blues, and bright whites. High-end editorial photography style."
+                                        style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDFYAziXrs-hKRP_0cVIv_HDUY_8xtGvq7gbNWlBquvzipYkle-PFzsT1A788O7hltbOJ3o26TbWOf5OE2Ry8SAVtM7nEmeUYNw1TQLqHuoxxA5TU89zYb-oemctKwfqiA5teLOQ0wm2loTVWWBqNbTf4deQkZVIvthdgfNSuWcmYsfl0n3oUhSaTB2aSB9mzJwvAdpSolqkkocX6GZPbdybK_1qauw6GWibspM-6s_RCaMPQ43M_Yb7yXaMgodaN79DztwC4b7FsU')">
+                                </div>
+                                <div
+                                        class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent">
+                                </div>
+                                <!-- Default Content -->
+                                <div
+                                        class="absolute bottom-6 left-6 right-6 season-title transition-transform duration-300">
+                                        <span
+                                                class="font-label-caps text-label-caps text-on-primary bg-primary/20 backdrop-blur-md px-3 py-1 rounded-full mb-2 inline-block">January</span>
+                                        <h3 class="font-headline-sm text-headline-sm text-on-primary mt-1">Winter's
+                                                Breath</h3>
+                                </div>
+                                <!-- Hover Overlay (Glassmorphism) -->
+                                <div
+                                        class="season-overlay absolute inset-0 bg-primary/80 backdrop-blur-md opacity-0 transition-opacity duration-300 flex flex-col justify-center items-center text-center p-6">
+                                        <span
+                                                class="material-symbols-outlined text-on-primary mb-4 text-4xl">ac_unit</span>
+                                        <p class="font-body-md text-body-md text-on-primary">Perfect for crisp mountain
+                                                air and cozy local cafes.</p>
+                                </div>
+                        </div>
+                        <!-- Month 2: Feb -->
+                        <div
+                                class="season-card relative rounded-[24px] overflow-hidden group cursor-pointer border border-outline-variant/20 shadow-sm md:col-span-2 row-span-1">
+                                <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
+                                        data-alt="Vibrant pink Tecoma flowers in full bloom along a winding road in Nan, Thailand during February. The scene is bathed in warm, romantic sunlight. A sophisticated editorial composition highlighting the organic curves of the road and the striking pink blossoms against a clear blue sky."
+                                        style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBEKEFeUSN3KY4efwhru4RUcYSkPTs6y4lGm32XkUVELtLJaGfdkXPOo_TCQacaAivbuSb-IPwDmuIcdc4mlqf0LOdNXkQLVIrPUtM4Mt-lcXTMQyKFo3vd3FOXz14dYJOLVTIJ9cXri8NNGoPqvcR9UTyPqdlh52AlzWlyISPY_2Z4OXWAPfh-MHDvDMvkKeLeagVuXGQXEFTvJ5f14AsS7cVrZmPPWF2N1maL0ncF3PY1vYJmYeszaYhb-ZZMMBcHDNUMk5Wp1qI')">
+                                </div>
+                                <div
+                                        class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent">
+                                </div>
+                                <div
+                                        class="absolute bottom-6 left-6 right-6 season-title transition-transform duration-300">
+                                        <span
+                                                class="font-label-caps text-label-caps text-on-primary bg-primary/20 backdrop-blur-md px-3 py-1 rounded-full mb-2 inline-block">February</span>
+                                        <h3 class="font-headline-sm text-headline-sm text-on-primary mt-1">The Pink
+                                                Blossom</h3>
+                                </div>
+                                <div
+                                        class="season-overlay absolute inset-0 bg-primary/80 backdrop-blur-md opacity-0 transition-opacity duration-300 flex flex-col justify-center items-center text-center p-6">
+                                        <span
+                                                class="material-symbols-outlined text-on-primary mb-4 text-4xl">local_florist</span>
+                                        <p class="font-body-md text-body-md text-on-primary">Ideal for romantic drives
+                                                through the pink Tecoma tunnels.</p>
+                                </div>
+                        </div>
+                        <!-- Month 3: March -->
+                        <div
+                                class="season-card relative rounded-[24px] overflow-hidden group cursor-pointer border border-outline-variant/20 shadow-sm md:col-span-1 row-span-1">
+                                <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
+                                        data-alt="A tranquil scene of the Nan River in March, with low water levels revealing sandy banks. Traditional wooden longboats are moored gently. The lighting is golden hour, casting long, elegant shadows. The color palette focuses on earthy browns, golden yellows, and the deep green of the river."
+                                        style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuChkvfbPOIOIBcjisHfy9BMYqwsHaczCBSxcogk5T2Ft3PJLhY6gJVSlUdZx4DSe4tiDJPS4rCIlZHwmoYzWTW5ZADo0oxLXqfGlYr2ELGdva1kYJ_Ai9grXSWoIaC83ZCWaviqxdjNwDLBXJRHsv64WR9VqSbheUpGr8yJx8F6Dshzoj4qx5u61QiW5-xrjRD6ypB8uoVIsoJc853dUWWyZKfG8-zD6eq3sv0sf9FYenZMUmiPkXeCBfRLgWH9QMtsWCHuLtmlumk')">
+                                </div>
+                                <div
+                                        class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent">
+                                </div>
+                                <div
+                                        class="absolute bottom-6 left-6 right-6 season-title transition-transform duration-300">
+                                        <span
+                                                class="font-label-caps text-label-caps text-on-primary bg-primary/20 backdrop-blur-md px-3 py-1 rounded-full mb-2 inline-block">March</span>
+                                        <h3 class="font-headline-sm text-headline-sm text-on-primary mt-1">River's Ebb
+                                        </h3>
+                                </div>
+                                <div
+                                        class="season-overlay absolute inset-0 bg-primary/80 backdrop-blur-md opacity-0 transition-opacity duration-300 flex flex-col justify-center items-center text-center p-6">
+                                        <span
+                                                class="material-symbols-outlined text-on-primary mb-4 text-4xl">sailing</span>
+                                        <p class="font-body-md text-body-md text-on-primary">Explore the revealed
+                                                riverbanks and quiet riverside communities.</p>
+                                </div>
+                        </div>
+                        <!-- Month 4: April (Songkran) -->
+                        <div
+                                class="season-card relative rounded-[24px] overflow-hidden group cursor-pointer border border-outline-variant/20 shadow-sm md:col-span-1 row-span-1">
+                                <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
+                                        data-alt="A festive and vibrant scene capturing the essence of Songkran in Nan, Thailand during April. Water splashing playfully in the bright, intense sunlight. Traditional Lanna flags fluttering in the background. A dynamic, high-contrast editorial shot with vivid blues, yellows, and warm skin tones."
+                                        style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBFnZ0S50nXpa-P7yPZgIBhIAaI2BCQSoD2h0u4GuEH-i1fLl3a4TetyOJ46HUUguRC6fthtkXNSRLO6cexu6jQxKY4KG6HTEBtBaTNMuO0Q2W18HnqMJ4T4R7-TjQ6Cr1TtQrhTyaiHwCtAhiV1cf4Czh9Xzo04jGs8YeeyOzOlPP4SY2biILZ5o_UAM9OcpxNCIDPUdjqGE474OyElm9tmWXnh1mi2r0enhUsa697gifh-GejD4kO6wM5R3s0S5OekbIwSjNlpiA')">
+                                </div>
+                                <div
+                                        class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent">
+                                </div>
+                                <div
+                                        class="absolute bottom-6 left-6 right-6 season-title transition-transform duration-300">
+                                        <span
+                                                class="font-label-caps text-label-caps text-on-primary bg-primary/20 backdrop-blur-md px-3 py-1 rounded-full mb-2 inline-block">April</span>
+                                        <h3 class="font-headline-sm text-headline-sm text-on-primary mt-1">Water &amp;
+                                                Light</h3>
+                                </div>
+                                <div
+                                        class="season-overlay absolute inset-0 bg-primary/80 backdrop-blur-md opacity-0 transition-opacity duration-300 flex flex-col justify-center items-center text-center p-6">
+                                        <span
+                                                class="material-symbols-outlined text-on-primary mb-4 text-4xl">water_drop</span>
+                                        <p class="font-body-md text-body-md text-on-primary">Experience the joyous
+                                                Songkran festival and local temple rituals.</p>
+                                </div>
+                        </div>
+                        <!-- Month 8: August (Highlight) -->
+                        <div
+                                class="season-card relative rounded-[24px] overflow-hidden group cursor-pointer border border-outline-variant/20 shadow-sm md:col-span-2 row-span-1">
+                                <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
+                                        data-alt="Expansive, lush green rice terraces in Nan, Thailand during the rainy season in August. Heavy, dramatic rain clouds contrast with the intensely vibrant green of the young rice plants. A moody, atmospheric, high-end landscape photograph capturing the raw power and beauty of the monsoon."
+                                        style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuA2LNfTLC7nkNkgzAfwam5AM3J5nJTctMgDevP9hg8Z4tcAqzCwBk_cRGs0ldC9R6M7FjmBIliDNQXsTzVCbNLFY6dxT7fJ5Bm_D4K5UJ06rx2nnaQOhV-vicQoPRUasnkZjF1YOoUbzcy6GwHc4DY9vtm-yJK1j6L6vcDhNyvh4B0vEKqtUOcjqKLW_Hfk3YXtq9jVta4TNDXITs9DZG5UANF1i4IxDCtKD9Y8PYlxWwnPT3s4uG-FsLUFmZxVf41_C6-YK9WXMng')">
+                                </div>
+                                <div
+                                        class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent">
+                                </div>
+                                <div
+                                        class="absolute bottom-6 left-6 right-6 season-title transition-transform duration-300">
+                                        <span
+                                                class="font-label-caps text-label-caps text-on-primary bg-primary/20 backdrop-blur-md px-3 py-1 rounded-full mb-2 inline-block">August</span>
+                                        <h3 class="font-headline-sm text-headline-sm text-on-primary mt-1">The Green
+                                                Season</h3>
+                                </div>
+                                <div
+                                        class="season-overlay absolute inset-0 bg-primary/80 backdrop-blur-md opacity-0 transition-opacity duration-300 flex flex-col justify-center items-center text-center p-6">
+                                        <span
+                                                class="material-symbols-outlined text-on-primary mb-4 text-4xl">grass</span>
+                                        <p class="font-body-md text-body-md text-on-primary">A photographer's dream:
+                                                vibrant rice terraces and dramatic skies.</p>
+                                </div>
+                        </div>
+                        <!-- Month 12: December -->
+                        <div
+                                class="season-card relative rounded-[24px] overflow-hidden group cursor-pointer border border-outline-variant/20 shadow-sm md:col-span-1 row-span-1">
+                                <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
+                                        data-alt="A breathtaking view of the 'Sea of Mist' over the mountains of Nan, Thailand in December. The early morning sun creates a soft, pastel glow over the rolling clouds in the valleys. A tranquil, ethereal, and majestic landscape shot with soft pinks, purples, and cool blues."
+                                        style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBqlaoTrcO96G8S7svgj75vs0_ipZku6_ZcKDd1alqM-HXqSOA6q7u0tEGtVtuFD3yCyjqkG6lxDadKiStwFTG0YtvlsIcRL9RWDy0VzmEo2EswWcZIYkRCAvUCSIAYZAYMkE1BWsccabuSFXA6KC9owjJyYDt9ptAfXvdwzp_XeIJnn_4A79huccjtc7UoIOAmrSs8eqdfLQVD5DDoglTL2TnFZHBc2QkjIfQU0ccYUPbwcJfFBilVkeg35gDIUN-2rmkfS0945_8')">
+                                </div>
+                                <div
+                                        class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent">
+                                </div>
+                                <div
+                                        class="absolute bottom-6 left-6 right-6 season-title transition-transform duration-300">
+                                        <span
+                                                class="font-label-caps text-label-caps text-on-primary bg-primary/20 backdrop-blur-md px-3 py-1 rounded-full mb-2 inline-block">December</span>
+                                        <h3 class="font-headline-sm text-headline-sm text-on-primary mt-1">Sea of Mist
+                                        </h3>
+                                </div>
+                                <div
+                                        class="season-overlay absolute inset-0 bg-primary/80 backdrop-blur-md opacity-0 transition-opacity duration-300 flex flex-col justify-center items-center text-center p-6">
+                                        <span
+                                                class="material-symbols-outlined text-on-primary mb-4 text-4xl">cloudy</span>
+                                        <p class="font-body-md text-body-md text-on-primary">Wake up early for
+                                                spectacular views above the clouds.</p>
+                                </div>
+                        </div>
+                </section>
+        </section>
+        </main>
+        <nav
+                class="md:hidden fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-safe h-20 bg-background/90 dark:bg-background/90 backdrop-blur-xl border-t border-outline-variant/20 rounded-t-xl">
+                <a class="flex flex-col items-center justify-center text-primary dark:text-primary-fixed-dim bg-primary-fixed/20 rounded-xl px-4 py-2 hover:bg-surface-container-low transition-all"
+                        href="../index.html">
+                        <span class="material-symbols-outlined mb-1">explore</span>
+                        <span class="font-label-caps text-label-caps">ฤดูกาล</span>
+                </a>
+                <a class="flex flex-col items-center justify-center text-on-surface-variant/70 dark:text-surface-variant/70 px-4 py-2 hover:bg-surface-container-low transition-all"
+                        href="your-plan.html">
+                        <span class="material-symbols-outlined mb-1">auto_awesome</span>
+                        <span class="font-label-caps text-label-caps">วางแผน</span>
+                </a>
+                <a class="flex flex-col items-center justify-center text-on-surface-variant/70 dark:text-surface-variant/70 px-4 py-2 hover:bg-surface-container-low transition-all"
+                        href="your-plan.html">
+                        <span class="material-symbols-outlined mb-1">map</span>
+                        <span class="font-label-caps text-label-caps">แผน</span>
+                </a>
+                <a class="flex flex-col items-center justify-center text-on-surface-variant/70 dark:text-surface-variant/70 px-4 py-2 hover:bg-surface-container-low transition-all"
+                        href="stories.html">
+                        <span class="material-symbols-outlined mb-1">menu_book</span><span class="font-label-caps text-label-caps">เรื่องเล่า</span>
+                </a>
+        </nav>
+        <script>
+        const WEATHER_IMAGES = {
+                rain: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCKDhyiN5DjiaBIMSR34rOLIDu-mKNJ70YSiYrGJBzbRyL2yXZiN7sFYU5R8Fmk6EBmWV8Q7yoLso7XClAcEANU4hgFd89YVdrBPeOrllVh6xTkGNz3VCdzJzRgnhVpkbAs4GizoiZioJlQz08RhjnDRDKnrwZ-YpjyAjGvNQ-Is-Ael37tnmpj-lfaVTDRjYLb2pu68MJPvzzlDHDYKnhi-Rjwd9XYdmZrrjhKgcvTASN7WnWlt7T2hcCxSKm94AOrZ406O-NH96U',
+                cloudy: 'https://lh3.googleusercontent.com/aida-public/AB6AXuA2LNfTLC7nkNkgzAfwam5AM3J5nJTctMgDevP9hg8Z4tcAqzCwBk_cRGs0ldC9R6M7FjmBIliDNQXsTzVCbNLFY6dxT7fJ5Bm_D4K5UJ06rx2nnaQOhV-vicQoPRUasnkZjF1YOoUbzcy6GwHc4DY9vtm-yJK1j6L6vcDhNyvh4B0vEKqtUOcjqKLW_Hfk3YXtq9jVta4TNDXITs9DZG5UANF1i4IxDCtKD9Y8PYlxWwnPT3s4uG-FsLUFmZxVf41_C6-YK9WXMng',
+                clear: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBEKEFeUSN3KY4efwhru4RUcYSkPTs6y4lGm32XkUVELtLJaGfdkXPOo_TCQacaAivbuSb-IPwDmuIcdc4mlqf0LOdNXkQLVIrPUtM4Mt-lcXTMQyKFo3vd3FOXz14dYJOLVTIJ9cXri8NNGoPqvcR9UTyPqdlh52AlzWlyISPY_2Z4OXWAPfh-MHDvDMvkKeLeagVuXGQXEFTvJ5f14AsS7cVrZmPPWF2N1maL0ncF3PY1vYJmYeszaYhb-ZZMMBcHDNUMk5Wp1qI',
+                night: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBqlaoTrcO96G8S7svgj75vs0_ipZku6_ZcKDd1alqM-HXqSOA6q7u0tEGtVtuFD3yCyjqkG6lxDadKiStwFTG0YtvlsIcRL9RWDy0VzmEo2EswWcZIYkRCAvUCSIAYZAYMkE1BWsccabuSFXA6KC9owjJyYDt9ptAfXvdwzp_XeIJnn_4A79huccjtc7UoIOAmrSs8eqdfLQVD5DDoglTL2TnFZHBc2QkjIfQU0ccYUPbwcJfFBilVkeg35gDIUN-2rmkfS0945_8'
+        };
+        const WEATHER_COPY = {
+                rain: { icon: 'rainy', label: 'ฝนกำลังมาเยือนน่าน' },
+                cloudy: { icon: 'cloud', label: 'ท้องฟ้าน่านมีเมฆ' },
+                clear: { icon: 'clear_day', label: 'แสงใสของน่าน' },
+                night: { icon: 'nights_stay', label: 'น่านยามค่ำ' }
+        };
+        function classifyWeather(current) {
+                const code = Number(current.weather_code);
+                const rain = Number(current.rain || 0);
+                const precipitation = Number(current.precipitation || 0);
+                const cloudCover = Number(current.cloud_cover || 0);
+                if (Number(current.is_day) === 0) return 'night';
+                if (rain > 0 || precipitation > 0 || [51, 53, 55, 61, 63, 65, 66, 67, 80, 81, 82, 95, 96, 99].includes(code)) return 'rain';
+                if ([1, 2, 3, 45, 48].includes(code) || cloudCover >= 55) return 'cloudy';
+                return 'clear';
+        }
+        function applyWeather(kind, current = null) {
+                const copy = WEATHER_COPY[kind] || WEATHER_COPY.rain;
+                const image = WEATHER_IMAGES[kind] || WEATHER_IMAGES.rain;
+                const temp = current && Number.isFinite(Number(current.temperature_2m)) ? ` · ${Math.round(current.temperature_2m)}°C` : '';
+                const wind = current && Number.isFinite(Number(current.wind_speed_10m)) ? ` · Wind ${Math.round(current.wind_speed_10m)} km/h` : '';
+                const fullLabel = `${copy.label}${temp}${wind}`;
+                const heroImage = document.getElementById('weather-hero-image');
+                const heroIcon = document.getElementById('weather-icon');
+                const heroLabel = document.getElementById('weather-label');
+                const headerIcon = document.getElementById('weather-header-icon');
+                const headerLabel = document.getElementById('weather-header-label');
+                if (heroImage) heroImage.src = image;
+                if (heroIcon) heroIcon.textContent = copy.icon;
+                if (heroLabel) heroLabel.textContent = fullLabel;
+                if (headerIcon) headerIcon.textContent = copy.icon;
+                if (headerLabel) headerLabel.textContent = fullLabel;
+        }
+        async function loadNanWeather() {
+                const url = 'https://api.open-meteo.com/v1/forecast?latitude=18.7756&longitude=100.7730&current=temperature_2m,relative_humidity_2m,apparent_temperature,is_day,precipitation,rain,weather_code,cloud_cover,wind_speed_10m&timezone=Asia%2FBangkok';
+                try {
+                        const response = await fetch(url, { cache: 'no-store' });
+                        if (!response.ok) throw new Error(`Weather request failed: ${response.status}`);
+                        const data = await response.json();
+                        const current = data.current || {};
+                        applyWeather(classifyWeather(current), current);
+                } catch (error) {
+                        console.warn('Using fallback Nan weather background.', error);
+                        applyWeather('rain');
+                }
+        }
+        loadNanWeather();
+</script>
+        
+        <script src="../assets/js/app.js" defer></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+

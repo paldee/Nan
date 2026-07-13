@@ -1,0 +1,508 @@
+﻿<!DOCTYPE html>
+<html class="light scroll-smooth" lang="en">
+<head>
+        <meta charset="utf-8" />
+        <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+        <title>Nan Beyond AI - Your Plan</title>
+        <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;700&amp;family=Playfair+Display:wght@600;700&amp;display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet" />
+        <script id="tailwind-config">
+                tailwind.config = {
+                        darkMode: "class",
+                        theme: {
+                                extend: {
+                                        colors: {
+                                                "error-container": "#ffdad6",
+                                                "surface-dim": "#dbdad5",
+                                                "on-surface": "#1b1c19",
+                                                "on-secondary-fixed-variant": "#623f18",
+                                                "on-primary-fixed": "#052013",
+                                                "primary-container": "#1e392a",
+                                                "surface-container-lowest": "#ffffff",
+                                                "surface-tint": "#496553",
+                                                "secondary-container": "#ffca98",
+                                                "surface-variant": "#e4e2dd",
+                                                "on-secondary": "#ffffff",
+                                                "on-surface-variant": "#424843",
+                                                "inverse-surface": "#30312e",
+                                                "outline": "#727973",
+                                                "on-tertiary-fixed": "#131f0d",
+                                                "tertiary": "#162210",
+                                                "error": "#ba1a1a",
+                                                "on-tertiary": "#ffffff",
+                                                "on-error-container": "#93000a",
+                                                "on-secondary-fixed": "#2c1600",
+                                                "on-primary-container": "#85a38f",
+                                                "on-tertiary-fixed-variant": "#3e4a36",
+                                                "inverse-on-surface": "#f2f1ec",
+                                                "surface-container": "#f0eee9",
+                                                "surface-container-high": "#eae8e3",
+                                                "surface-bright": "#fbf9f4",
+                                                "on-tertiary-container": "#92a087",
+                                                "on-primary-fixed-variant": "#314d3c",
+                                                "primary": "#072316",
+                                                "tertiary-container": "#2b3724",
+                                                "surface-container-highest": "#e4e2dd",
+                                                "surface-container-low": "#f5f3ee",
+                                                "on-background": "#1b1c19",
+                                                "primary-fixed": "#cbead4",
+                                                "tertiary-fixed": "#d8e7cb",
+                                                "on-primary": "#ffffff",
+                                                "tertiary-fixed-dim": "#bccbb0",
+                                                "primary-fixed-dim": "#afceb9",
+                                                "outline-variant": "#c2c8c1",
+                                                "on-error": "#ffffff",
+                                                "secondary": "#7d562d",
+                                                "inverse-primary": "#afceb9",
+                                                "secondary-fixed": "#ffdcbd",
+                                                "secondary-fixed-dim": "#f0bd8b",
+                                                "background": "#fbf9f4",
+                                                "on-secondary-container": "#7a532a",
+                                                "surface": "#fbf9f4"
+                                        },
+                                        borderRadius: {
+                                                DEFAULT: "0.25rem",
+                                                lg: "0.5rem",
+                                                xl: "0.75rem",
+                                                full: "9999px"
+                                        },
+                                        spacing: {
+                                                "margin-mobile": "20px",
+                                                gutter: "24px",
+                                                "margin-desktop": "64px",
+                                                "container-max": "1280px",
+                                                "section-gap": "120px",
+                                                unit: "8px",
+                                                safe: "env(safe-area-inset-bottom, 20px)"
+                                        },
+                                        fontFamily: {
+                                                "display-lg": ["Playfair Display"],
+                                                "headline-md": ["Playfair Display"],
+                                                "headline-sm": ["Playfair Display"],
+                                                "display-lg-mobile": ["Playfair Display"],
+                                                "label-caps": ["Hanken Grotesk"],
+                                                "body-lg": ["Hanken Grotesk"],
+                                                "body-md": ["Hanken Grotesk"],
+                                                "data-mono": ["Hanken Grotesk"]
+                                        },
+                                        fontSize: {
+                                                "display-lg": ["64px", { lineHeight: "1.1", letterSpacing: "-0.02em", fontWeight: "700" }],
+                                                "headline-md": ["32px", { lineHeight: "1.3", fontWeight: "600" }],
+                                                "headline-sm": ["24px", { lineHeight: "1.4", fontWeight: "600" }],
+                                                "display-lg-mobile": ["40px", { lineHeight: "1.2", fontWeight: "700" }],
+                                                "label-caps": ["12px", { lineHeight: "1", letterSpacing: "0.1em", fontWeight: "700" }],
+                                                "body-lg": ["18px", { lineHeight: "1.6", fontWeight: "400" }],
+                                                "body-md": ["16px", { lineHeight: "1.6", fontWeight: "400" }],
+                                                "data-mono": ["14px", { lineHeight: "1.4", fontWeight: "500" }]
+                                        }
+                                }
+                        }
+                }
+        </script>
+        <style>
+                html { scroll-behavior: smooth; }
+                body { font-family: 'Hanken Grotesk', sans-serif; overflow-y: auto; }
+                h1, h2, h3, h4, h5, h6 { font-family: 'Playfair Display', serif; }
+                section[id] { scroll-margin-top: 88px; }
+                ::-webkit-scrollbar { width: 8px; }
+                ::-webkit-scrollbar-track { background: transparent; }
+                ::-webkit-scrollbar-thumb { background-color: rgba(114, 121, 115, 0.3); border-radius: 20px; }
+                .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+                .material-symbols-outlined.fill-icon { font-variation-settings: 'FILL' 1; }
+                .timeline-line::before { content: ''; position: absolute; top: 24px; bottom: -40px; left: 20px; width: 1px; background-color: #c2c8c1; z-index: 0; }
+                @media (min-width: 768px) { .timeline-line::before { left: 50%; transform: translateX(-50%); } }
+                .glass-overlay, .glass-panel { backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); }
+                .glass-panel { background: rgba(255, 255, 255, 0.7); border: 1px solid rgba(0, 0, 0, 0.05); }
+                .hide-scrollbar::-webkit-scrollbar { display: none; }
+                .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+                .season-card:hover .season-overlay { opacity: 1; }
+                .season-card:hover .season-title { transform: translateY(-10px); }
+                .ai-shimmer { background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent); background-size: 200% 100%; animation: shimmer 2s infinite linear; }
+                @keyframes shimmer { 0% { background-position: -200% 0; } 100% { background-position: 200% 0; } }
+                body { opacity: 0; transform: translateY(8px); transition: opacity 220ms ease, transform 220ms ease; }
+                body.page-ready { opacity: 1; transform: translateY(0); }
+                body.page-leaving { opacity: 0; transform: translateY(-6px); }
+                main { width: 100%; }
+                .page-shell { width: min(100%, 1280px); margin-inline: auto; }
+        </style>
+</head>
+<body class="bg-background text-on-background font-body-md min-h-screen antialiased overflow-x-hidden overflow-y-auto selection:bg-primary-fixed selection:text-on-primary-fixed pb-24 md:pb-0 scroll-smooth">
+        <header
+                class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4 bg-background/80 dark:bg-background/80 backdrop-blur-xl bg-background/70">
+                <a class="font-label-caps text-sm md:text-base text-primary dark:text-primary-fixed uppercase tracking-wider hover:text-primary-container transition-colors" href="../index.html">Nan Beyond</a>
+                <nav class="hidden md:flex gap-6 items-center font-label-caps text-sm uppercase tracking-wider">
+                        <a class="text-primary dark:text-primary-fixed font-bold border-b-2 border-primary dark:border-primary-fixed pb-1 active:scale-95 duration-200"
+                                href="../index.html">ฤดูกาล</a>
+                        <a class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed transition-colors"
+                                href="your-plan.html">แผนเที่ยว</a>
+                        <a class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed transition-colors"
+                                href="stories.html">เรื่องเล่า</a>
+                </nav>
+                <div class="flex items-center gap-4 text-primary dark:text-primary-fixed"><div class="hidden lg:flex items-center gap-2 text-on-surface-variant font-data-mono text-data-mono"><span id="weather-header-icon" class="material-symbols-outlined text-primary text-[18px]">rainy</span><span id="weather-header-label">อากาศน่าน</span></div>
+                        
+                </div>
+        </header>
+        <main class="min-h-screen overflow-y-auto">
+                <section id="your-plan" class="w-full pt-32 pb-32 md:pb-24 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+                <header class="mb-12 md:mb-16 text-center max-w-2xl mx-auto">
+                        <h1
+                                class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-primary mb-4">
+                                Map / Your Plan</h1>
+                        <p class="font-body-lg text-body-lg text-on-surface-variant/80">เลือกเดือน ความสนใจ และจังหวะการเดินทางของคุณ ระบบจะผสานฤดูกาล อากาศจริง Hidden Gems และเรื่องเล่าท้องถิ่นให้กลายเป็นแผนเที่ยวที่เหมาะกับช่วงเวลานั้น</p>
+                </header>
+                <form class="space-y-section-gap" id="plan-form">
+                        <!-- Section 1: Time -->
+                        <section class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-start">
+                                <div class="md:col-span-4 sticky top-24">
+                                        <h2
+                                                class="font-headline-sm text-headline-sm text-primary mb-2 flex items-center gap-2">
+                                                <span
+                                                        class="material-symbols-outlined text-secondary">calendar_month</span>
+                                                เดินทางเดือนไหน
+                                        </h2>
+                                        <p class="text-on-surface-variant/70 text-sm">เลือกเดือนที่อยากเดินทาง เพื่อให้คำแนะนำสอดคล้องกับฤดูกาลและบรรยากาศจริงของน่าน</p>
+                                </div>
+                                <div class="md:col-span-8">
+                                        <div class="grid grid-cols-2 sm:grid-cols-3 gap-4">
+                                                                                                <!-- Month Picker Grid -->
+                                                <label class="relative cursor-pointer group">
+                                                        <input class="peer sr-only" name="month" type="radio" value="Jan" />
+                                                        <div class="glass-panel p-5 rounded-2xl text-center border border-transparent peer-checked:border-primary peer-checked:bg-primary-fixed/20 transition-all duration-300 hover:shadow-sm">
+                                                                <span class="block font-headline-sm text-headline-sm text-primary mb-1">Jan</span>
+                                                                <span class="block font-label-caps text-label-caps text-secondary">Cool Mist</span>
+                                                        </div>
+                                                </label>
+                                                <label class="relative cursor-pointer group">
+                                                        <input class="peer sr-only" name="month" type="radio" value="Feb" />
+                                                        <div class="glass-panel p-5 rounded-2xl text-center border border-transparent peer-checked:border-primary peer-checked:bg-primary-fixed/20 transition-all duration-300 hover:shadow-sm">
+                                                                <span class="block font-headline-sm text-headline-sm text-primary mb-1">Feb</span>
+                                                                <span class="block font-label-caps text-label-caps text-secondary">Pink Bloom</span>
+                                                        </div>
+                                                </label>
+                                                <label class="relative cursor-pointer group">
+                                                        <input class="peer sr-only" name="month" type="radio" value="Mar" />
+                                                        <div class="glass-panel p-5 rounded-2xl text-center border border-transparent peer-checked:border-primary peer-checked:bg-primary-fixed/20 transition-all duration-300 hover:shadow-sm">
+                                                                <span class="block font-headline-sm text-headline-sm text-primary mb-1">Mar</span>
+                                                                <span class="block font-label-caps text-label-caps text-secondary">Dry Warmth</span>
+                                                        </div>
+                                                </label>
+                                                <label class="relative cursor-pointer group">
+                                                        <input class="peer sr-only" name="month" type="radio" value="Apr" />
+                                                        <div class="glass-panel p-5 rounded-2xl text-center border border-transparent peer-checked:border-primary peer-checked:bg-primary-fixed/20 transition-all duration-300 hover:shadow-sm">
+                                                                <span class="block font-headline-sm text-headline-sm text-primary mb-1">Apr</span>
+                                                                <span class="block font-label-caps text-label-caps text-secondary">Songkran</span>
+                                                        </div>
+                                                </label>
+                                                <label class="relative cursor-pointer group">
+                                                        <input class="peer sr-only" name="month" type="radio" value="May" />
+                                                        <div class="glass-panel p-5 rounded-2xl text-center border border-transparent peer-checked:border-primary peer-checked:bg-primary-fixed/20 transition-all duration-300 hover:shadow-sm">
+                                                                <span class="block font-headline-sm text-headline-sm text-primary mb-1">May</span>
+                                                                <span class="block font-label-caps text-label-caps text-secondary">First Rain</span>
+                                                        </div>
+                                                </label>
+                                                <label class="relative cursor-pointer group">
+                                                        <input class="peer sr-only" name="month" type="radio" value="Jun" />
+                                                        <div class="glass-panel p-5 rounded-2xl text-center border border-transparent peer-checked:border-primary peer-checked:bg-primary-fixed/20 transition-all duration-300 hover:shadow-sm">
+                                                                <span class="block font-headline-sm text-headline-sm text-primary mb-1">Jun</span>
+                                                                <span class="block font-label-caps text-label-caps text-secondary">Green Start</span>
+                                                        </div>
+                                                </label>
+                                                <label class="relative cursor-pointer group">
+                                                        <input class="peer sr-only" name="month" type="radio" value="Jul" />
+                                                        <div class="glass-panel p-5 rounded-2xl text-center border border-transparent peer-checked:border-primary peer-checked:bg-primary-fixed/20 transition-all duration-300 hover:shadow-sm">
+                                                                <span class="block font-headline-sm text-headline-sm text-primary mb-1">Jul</span>
+                                                                <span class="block font-label-caps text-label-caps text-secondary">Rice Fields</span>
+                                                        </div>
+                                                </label>
+                                                <label class="relative cursor-pointer group">
+                                                        <input checked class="peer sr-only" name="month" type="radio" value="Aug" />
+                                                        <div class="glass-panel p-5 rounded-2xl text-center border border-transparent peer-checked:border-primary peer-checked:bg-primary-fixed/20 transition-all duration-300 hover:shadow-sm">
+                                                                <span class="block font-headline-sm text-headline-sm text-primary mb-1">Aug</span>
+                                                                <span class="block font-label-caps text-label-caps text-secondary">Emerald Rain</span>
+                                                        </div>
+                                                </label>
+                                                <label class="relative cursor-pointer group">
+                                                        <input class="peer sr-only" name="month" type="radio" value="Sep" />
+                                                        <div class="glass-panel p-5 rounded-2xl text-center border border-transparent peer-checked:border-primary peer-checked:bg-primary-fixed/20 transition-all duration-300 hover:shadow-sm">
+                                                                <span class="block font-headline-sm text-headline-sm text-primary mb-1">Sep</span>
+                                                                <span class="block font-label-caps text-label-caps text-secondary">Mist Trails</span>
+                                                        </div>
+                                                </label>
+                                                <label class="relative cursor-pointer group">
+                                                        <input class="peer sr-only" name="month" type="radio" value="Oct" />
+                                                        <div class="glass-panel p-5 rounded-2xl text-center border border-transparent peer-checked:border-primary peer-checked:bg-primary-fixed/20 transition-all duration-300 hover:shadow-sm">
+                                                                <span class="block font-headline-sm text-headline-sm text-primary mb-1">Oct</span>
+                                                                <span class="block font-label-caps text-label-caps text-secondary">Cool Shift</span>
+                                                        </div>
+                                                </label>
+                                                <label class="relative cursor-pointer group">
+                                                        <input class="peer sr-only" name="month" type="radio" value="Nov" />
+                                                        <div class="glass-panel p-5 rounded-2xl text-center border border-transparent peer-checked:border-primary peer-checked:bg-primary-fixed/20 transition-all duration-300 hover:shadow-sm">
+                                                                <span class="block font-headline-sm text-headline-sm text-primary mb-1">Nov</span>
+                                                                <span class="block font-label-caps text-label-caps text-secondary">Winter Air</span>
+                                                        </div>
+                                                </label>
+                                                <label class="relative cursor-pointer group">
+                                                        <input class="peer sr-only" name="month" type="radio" value="Dec" />
+                                                        <div class="glass-panel p-5 rounded-2xl text-center border border-transparent peer-checked:border-primary peer-checked:bg-primary-fixed/20 transition-all duration-300 hover:shadow-sm">
+                                                                <span class="block font-headline-sm text-headline-sm text-primary mb-1">Dec</span>
+                                                                <span class="block font-label-caps text-label-caps text-secondary">Sea of Mist</span>
+                                                        </div>
+                                                </label>
+                                        </div>
+                                </div>
+                        </section>
+                        <hr class="border-outline-variant/30" />
+                        <!-- Section 2: Vibe -->
+                        <section class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-start">
+                                <div class="md:col-span-4 sticky top-24">
+                                        <h2
+                                                class="font-headline-sm text-headline-sm text-primary mb-2 flex items-center gap-2">
+                                                <span class="material-symbols-outlined text-secondary">spa</span>
+                                                ความสนใจ
+                                        </h2>
+                                        <p class="text-on-surface-variant/70 text-sm">เลือกได้หลายอย่าง เพื่อให้แผนเที่ยวบาลานซ์ระหว่างธรรมชาติ วัฒนธรรม คาเฟ่ และกิจกรรมชุมชน</p>
+                                </div>
+                                <div class="md:col-span-8 flex flex-wrap gap-3">
+                                        <label class="cursor-pointer">
+                                                <input checked class="peer sr-only" name="vibe" type="checkbox" value="Photography" />
+                                                <div
+                                                        class="px-6 py-3 rounded-full border border-outline-variant/50 flex items-center gap-2 peer-checked:bg-primary peer-checked:text-on-primary peer-checked:border-primary transition-colors">
+                                                        <span
+                                                                class="material-symbols-outlined text-[20px]">photo_camera</span>
+                                                        <span class="font-data-mono text-data-mono">Photography</span>
+                                                </div>
+                                        </label>
+                                        <label class="cursor-pointer">
+                                                <input checked class="peer sr-only" name="vibe" type="checkbox" value="Peace" />
+                                                <div
+                                                        class="px-6 py-3 rounded-full border border-outline-variant/50 flex items-center gap-2 peer-checked:bg-primary peer-checked:text-on-primary peer-checked:border-primary transition-colors">
+                                                        <span
+                                                                class="material-symbols-outlined text-[20px]">self_improvement</span>
+                                                        <span class="font-data-mono text-data-mono">Peace &amp;
+                                                                Quiet</span>
+                                                </div>
+                                        </label>
+                                        <label class="cursor-pointer">
+                                                <input checked class="peer sr-only" name="vibe" type="checkbox" value="Crafts" />
+                                                <div
+                                                        class="px-6 py-3 rounded-full border border-outline-variant/50 flex items-center gap-2 peer-checked:bg-primary peer-checked:text-on-primary peer-checked:border-primary transition-colors">
+                                                        <span class="material-symbols-outlined text-[20px]">brush</span>
+                                                        <span class="font-data-mono text-data-mono">Local Crafts</span>
+                                                </div>
+                                        </label>
+                                        <label class="cursor-pointer">
+                                                <input checked class="peer sr-only" name="vibe" type="checkbox" value="Trekking" />
+                                                <div
+                                                        class="px-6 py-3 rounded-full border border-outline-variant/50 flex items-center gap-2 peer-checked:bg-primary peer-checked:text-on-primary peer-checked:border-primary transition-colors">
+                                                        <span
+                                                                class="material-symbols-outlined text-[20px]">hiking</span>
+                                                        <span class="font-data-mono text-data-mono">Trekking</span>
+                                                </div>
+                                        </label>
+                                        <label class="cursor-pointer">
+                                                <input checked class="peer sr-only" name="vibe" type="checkbox" value="Cafe" />
+                                                <div
+                                                        class="px-6 py-3 rounded-full border border-outline-variant/50 flex items-center gap-2 peer-checked:bg-primary peer-checked:text-on-primary peer-checked:border-primary transition-colors">
+                                                        <span
+                                                                class="material-symbols-outlined text-[20px]">local_cafe</span>
+                                                        <span class="font-data-mono text-data-mono">Cafe Hopping</span>
+                                                </div>
+                                        </label>
+                                </div>
+                        </section>
+                        <hr class="border-outline-variant/30" />
+                        <!-- Section 3: Pace & Group -->
+                        <section class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-start">
+                                <div class="md:col-span-4 sticky top-24">
+                                        <h2
+                                                class="font-headline-sm text-headline-sm text-primary mb-2 flex items-center gap-2">
+                                                <span class="material-symbols-outlined text-secondary">tune</span>
+                                                รูปแบบการเดินทาง
+                                        </h2>
+                                        <p class="text-on-surface-variant/70 text-sm">กำหนดจังหวะทริปและกลุ่มผู้ร่วมเดินทาง เพื่อให้แผนไม่แน่นหรือหลวมเกินไป</p>
+                                </div>
+                                <div class="md:col-span-8 space-y-12">
+                                        <!-- Pace Slider/Toggle -->
+                                        <div>
+                                                <h3
+                                                        class="font-label-caps text-label-caps text-on-surface-variant mb-4 uppercase tracking-wider">
+                                                        Pace</h3>
+                                                <div
+                                                        class="bg-surface-container-high p-2 rounded-2xl flex relative overflow-hidden">
+                                                        <!-- Visual Indicator (Simplistic JS needed for full slide effect, using CSS for state here) -->
+                                                        <label class="flex-1 text-center cursor-pointer z-10">
+                                                                <input checked="" class="peer sr-only" name="pace"
+                                                                        type="radio" value="slow" />
+                                                                <div
+                                                                        class="py-3 px-4 rounded-xl font-data-mono text-data-mono peer-checked:bg-surface-container-lowest peer-checked:text-primary peer-checked:shadow-sm transition-all text-on-surface-variant/60">
+                                                                        Slow (Immersive)
+                                                                </div>
+                                                        </label>
+                                                        <label class="flex-1 text-center cursor-pointer z-10">
+                                                                <input class="peer sr-only" name="pace" type="radio"
+                                                                        value="active" />
+                                                                <div
+                                                                        class="py-3 px-4 rounded-xl font-data-mono text-data-mono peer-checked:bg-surface-container-lowest peer-checked:text-primary peer-checked:shadow-sm transition-all text-on-surface-variant/60">
+                                                                        Active (Explorer)
+                                                                </div>
+                                                        </label>
+                                                </div>
+                                        </div>
+                                        <!-- Group Type -->
+                                        <div>
+                                                <h3
+                                                        class="font-label-caps text-label-caps text-on-surface-variant mb-4 uppercase tracking-wider">
+                                                        Companions</h3>
+                                                <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
+                                                        <label class="cursor-pointer">
+                                                                <input class="peer sr-only" name="group" type="radio"
+                                                                        value="solo" />
+                                                                <div
+                                                                        class="glass-panel p-4 rounded-xl text-center border border-transparent peer-checked:border-primary peer-checked:bg-primary-fixed/10 transition-all flex flex-col items-center gap-2">
+                                                                        <span
+                                                                                class="material-symbols-outlined text-on-surface-variant peer-checked:text-primary">person</span>
+                                                                        <span
+                                                                                class="font-data-mono text-data-mono">Solo</span>
+                                                                </div>
+                                                        </label>
+                                                        <label class="cursor-pointer">
+                                                                <input checked class="peer sr-only" name="group" type="radio" value="couple" />
+                                                                <div
+                                                                        class="glass-panel p-4 rounded-xl text-center border border-transparent peer-checked:border-primary peer-checked:bg-primary-fixed/10 transition-all flex flex-col items-center gap-2">
+                                                                        <span
+                                                                                class="material-symbols-outlined text-on-surface-variant peer-checked:text-primary">group</span>
+                                                                        <span
+                                                                                class="font-data-mono text-data-mono">Couple</span>
+                                                                </div>
+                                                        </label>
+                                                        <label class="cursor-pointer">
+                                                                <input class="peer sr-only" name="group" type="radio"
+                                                                        value="family" />
+                                                                <div
+                                                                        class="glass-panel p-4 rounded-xl text-center border border-transparent peer-checked:border-primary peer-checked:bg-primary-fixed/10 transition-all flex flex-col items-center gap-2">
+                                                                        <span
+                                                                                class="material-symbols-outlined text-on-surface-variant peer-checked:text-primary">family_restroom</span>
+                                                                        <span
+                                                                                class="font-data-mono text-data-mono">Family</span>
+                                                                </div>
+                                                        </label>
+                                                        <label class="cursor-pointer">
+                                                                <input class="peer sr-only" name="group" type="radio"
+                                                                        value="friends" />
+                                                                <div
+                                                                        class="glass-panel p-4 rounded-xl text-center border border-transparent peer-checked:border-primary peer-checked:bg-primary-fixed/10 transition-all flex flex-col items-center gap-2">
+                                                                        <span
+                                                                                class="material-symbols-outlined text-on-surface-variant peer-checked:text-primary">groups</span>
+                                                                        <span
+                                                                                class="font-data-mono text-data-mono">Friends</span>
+                                                                </div>
+                                                        </label>
+                                                </div>
+                                        </div>
+                                </div>
+                        </section>
+                        <!-- Submit Action -->
+                        <div class="pt-12 text-center md:text-right">
+                                <button class="bg-primary text-on-primary font-label-caps text-label-caps px-8 py-4 rounded-lg hover:bg-primary-container transition-colors relative overflow-hidden group shadow-sm inline-flex items-center gap-2"
+                                        type="button" data-generate-trip><span class="material-symbols-outlined text-[18px]">auto_awesome</span>
+                                        สร้างแผนเที่ยว
+                                        <div
+                                                class="absolute inset-0 ai-shimmer opacity-0 group-hover:opacity-100 transition-opacity">
+                                        </div>
+                                </button>
+                        </div>
+                </form>
+        </section>
+        </main>
+        <nav
+                class="md:hidden fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-safe h-20 bg-background/90 dark:bg-background/90 backdrop-blur-xl border-t border-outline-variant/20 rounded-t-xl">
+                <a class="flex flex-col items-center justify-center text-primary dark:text-primary-fixed-dim bg-primary-fixed/20 rounded-xl px-4 py-2 hover:bg-surface-container-low transition-all"
+                        href="../index.html">
+                        <span class="material-symbols-outlined mb-1">explore</span>
+                        <span class="font-label-caps text-label-caps">ฤดูกาล</span>
+                </a>
+                <a class="flex flex-col items-center justify-center text-on-surface-variant/70 dark:text-surface-variant/70 px-4 py-2 hover:bg-surface-container-low transition-all"
+                        href="your-plan.html">
+                        <span class="material-symbols-outlined mb-1">auto_awesome</span>
+                        <span class="font-label-caps text-label-caps">วางแผน</span>
+                </a>
+                <a class="flex flex-col items-center justify-center text-on-surface-variant/70 dark:text-surface-variant/70 px-4 py-2 hover:bg-surface-container-low transition-all"
+                        href="your-plan.html">
+                        <span class="material-symbols-outlined mb-1">map</span>
+                        <span class="font-label-caps text-label-caps">แผน</span>
+                </a>
+                <a class="flex flex-col items-center justify-center text-on-surface-variant/70 dark:text-surface-variant/70 px-4 py-2 hover:bg-surface-container-low transition-all"
+                        href="stories.html">
+                        <span class="material-symbols-outlined mb-1">menu_book</span><span class="font-label-caps text-label-caps">เรื่องเล่า</span>
+                </a>
+        </nav>
+        <script>
+        const WEATHER_IMAGES = {
+                rain: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCKDhyiN5DjiaBIMSR34rOLIDu-mKNJ70YSiYrGJBzbRyL2yXZiN7sFYU5R8Fmk6EBmWV8Q7yoLso7XClAcEANU4hgFd89YVdrBPeOrllVh6xTkGNz3VCdzJzRgnhVpkbAs4GizoiZioJlQz08RhjnDRDKnrwZ-YpjyAjGvNQ-Is-Ael37tnmpj-lfaVTDRjYLb2pu68MJPvzzlDHDYKnhi-Rjwd9XYdmZrrjhKgcvTASN7WnWlt7T2hcCxSKm94AOrZ406O-NH96U',
+                cloudy: 'https://lh3.googleusercontent.com/aida-public/AB6AXuA2LNfTLC7nkNkgzAfwam5AM3J5nJTctMgDevP9hg8Z4tcAqzCwBk_cRGs0ldC9R6M7FjmBIliDNQXsTzVCbNLFY6dxT7fJ5Bm_D4K5UJ06rx2nnaQOhV-vicQoPRUasnkZjF1YOoUbzcy6GwHc4DY9vtm-yJK1j6L6vcDhNyvh4B0vEKqtUOcjqKLW_Hfk3YXtq9jVta4TNDXITs9DZG5UANF1i4IxDCtKD9Y8PYlxWwnPT3s4uG-FsLUFmZxVf41_C6-YK9WXMng',
+                clear: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBEKEFeUSN3KY4efwhru4RUcYSkPTs6y4lGm32XkUVELtLJaGfdkXPOo_TCQacaAivbuSb-IPwDmuIcdc4mlqf0LOdNXkQLVIrPUtM4Mt-lcXTMQyKFo3vd3FOXz14dYJOLVTIJ9cXri8NNGoPqvcR9UTyPqdlh52AlzWlyISPY_2Z4OXWAPfh-MHDvDMvkKeLeagVuXGQXEFTvJ5f14AsS7cVrZmPPWF2N1maL0ncF3PY1vYJmYeszaYhb-ZZMMBcHDNUMk5Wp1qI',
+                night: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBqlaoTrcO96G8S7svgj75vs0_ipZku6_ZcKDd1alqM-HXqSOA6q7u0tEGtVtuFD3yCyjqkG6lxDadKiStwFTG0YtvlsIcRL9RWDy0VzmEo2EswWcZIYkRCAvUCSIAYZAYMkE1BWsccabuSFXA6KC9owjJyYDt9ptAfXvdwzp_XeIJnn_4A79huccjtc7UoIOAmrSs8eqdfLQVD5DDoglTL2TnFZHBc2QkjIfQU0ccYUPbwcJfFBilVkeg35gDIUN-2rmkfS0945_8'
+        };
+        const WEATHER_COPY = {
+                rain: { icon: 'rainy', label: 'ฝนกำลังมาเยือนน่าน' },
+                cloudy: { icon: 'cloud', label: 'ท้องฟ้าน่านมีเมฆ' },
+                clear: { icon: 'clear_day', label: 'แสงใสของน่าน' },
+                night: { icon: 'nights_stay', label: 'น่านยามค่ำ' }
+        };
+        function classifyWeather(current) {
+                const code = Number(current.weather_code);
+                const rain = Number(current.rain || 0);
+                const precipitation = Number(current.precipitation || 0);
+                const cloudCover = Number(current.cloud_cover || 0);
+                if (Number(current.is_day) === 0) return 'night';
+                if (rain > 0 || precipitation > 0 || [51, 53, 55, 61, 63, 65, 66, 67, 80, 81, 82, 95, 96, 99].includes(code)) return 'rain';
+                if ([1, 2, 3, 45, 48].includes(code) || cloudCover >= 55) return 'cloudy';
+                return 'clear';
+        }
+        function applyWeather(kind, current = null) {
+                const copy = WEATHER_COPY[kind] || WEATHER_COPY.rain;
+                const image = WEATHER_IMAGES[kind] || WEATHER_IMAGES.rain;
+                const temp = current && Number.isFinite(Number(current.temperature_2m)) ? ` · ${Math.round(current.temperature_2m)}°C` : '';
+                const wind = current && Number.isFinite(Number(current.wind_speed_10m)) ? ` · Wind ${Math.round(current.wind_speed_10m)} km/h` : '';
+                const fullLabel = `${copy.label}${temp}${wind}`;
+                const heroImage = document.getElementById('weather-hero-image');
+                const heroIcon = document.getElementById('weather-icon');
+                const heroLabel = document.getElementById('weather-label');
+                const headerIcon = document.getElementById('weather-header-icon');
+                const headerLabel = document.getElementById('weather-header-label');
+                if (heroImage) heroImage.src = image;
+                if (heroIcon) heroIcon.textContent = copy.icon;
+                if (heroLabel) heroLabel.textContent = fullLabel;
+                if (headerIcon) headerIcon.textContent = copy.icon;
+                if (headerLabel) headerLabel.textContent = fullLabel;
+        }
+        async function loadNanWeather() {
+                const url = 'https://api.open-meteo.com/v1/forecast?latitude=18.7756&longitude=100.7730&current=temperature_2m,relative_humidity_2m,apparent_temperature,is_day,precipitation,rain,weather_code,cloud_cover,wind_speed_10m&timezone=Asia%2FBangkok';
+                try {
+                        const response = await fetch(url, { cache: 'no-store' });
+                        if (!response.ok) throw new Error(`Weather request failed: ${response.status}`);
+                        const data = await response.json();
+                        const current = data.current || {};
+                        applyWeather(classifyWeather(current), current);
+                } catch (error) {
+                        console.warn('Using fallback Nan weather background.', error);
+                        applyWeather('rain');
+                }
+        }
+        loadNanWeather();
+</script>
+                <script src="../assets/js/app.js" defer></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
