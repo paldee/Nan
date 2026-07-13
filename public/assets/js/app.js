@@ -132,10 +132,10 @@ const translations = {
     weatherNight: "Night",
     heroBadge: "Lush Rainy Season",
     heroTitle: "August in Nan: Where the Earth Breathes Green",
-    heroDesc: "Crafting Your Nan Journey",
+    heroDesc: "Plan your Nan journey based on real seasons, live weather, and monthly charms. From Wat Phumin and Pua to Bo Kluea, Doi Samer Dao, and Sao Din Na Noi.",
     heroCta: "PLAN YOUR NAN",
-    seasonSectionLabel: "August in Nan: Where the Earth Breathes Green",
-    seasonSectionTitle: "Seasonal highlights",
+    seasonSectionLabel: "Nan 12 Months",
+    seasonSectionTitle: "Seasonal Highlights",
     seasonSectionDesc: "Each month in Nan has a different rhythm. Use this guide to choose the mood, route, and local experience that fits your travel window.",
     planPageTitle: "Crafting Your Nan Journey",
     planPageIntro: "Choose your month, interests, and pace of travel. The system blends seasonality, real weather, hidden gems, and local stories into a trip plan that fits that moment.",
@@ -145,8 +145,8 @@ const translations = {
     planSectionVibeDesc: "Choose the experiences that speak to you most and shape your days.",
     planSectionPaceTitle: "Dynamics",
     planSectionPaceDesc: "Define the rhythm of your trip and who you're sharing it with.",
-    storyPageTitle: "August in Nan: Where the Earth Breathes Green",
-    storyPageIntro: "Crafting Your Nan Journey",
+    storyPageTitle: "Twelve Months, Twelve Souls. Which Nan is Yours?",
+    storyPageIntro: "Explore the shifting atmospheres of Northern Thailand. From vibrant blooms to misty mornings, Nan transforms with every passing month.",
     journeyPageBadge: "A journey map made for you",
     journeyPageTitle: "Your 3 Day-Emerald Journey",
     journeyPageIntro: "A route shaped by season and real weather, blending green nature, local communities, and the cultural heritage of Nan.",
@@ -162,6 +162,13 @@ const translations = {
     sourcesIntro: "A curated set of official and trusted sources for planning your Nan journey.",
     sourcesNote: "Place and festival references are drawn from TAT Nan, 5 Must Do In Nan, and live weather from Open-Meteo."
   }
+};
+
+const WEATHER_IMAGES = {
+  rain: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCKDhyiN5DjiaBIMSR34rOLIDu-mKNJ70YSiYrGJBzbRyL2yXZiN7sFYU5R8Fmk6EBmWV8Q7yoLso7XClAcEANU4hgFd89YVdrBPeOrllVh6xTkGNz3VCdzJzRgnhVpkbAs4GizoiZioJlQz08RhjnDRDKnrwZ-YpjyAjGvNQ-Is-Ael37tnmpj-lfaVTDRjYLb2pu68MJPvzzlDHDYKnhi-Rjwd9XYdmZrrjhKgcvTASN7WnWlt7T2hcCxSKm94AOrZ406O-NH96U',
+  cloudy: 'https://lh3.googleusercontent.com/aida-public/AB6AXuA2LNfTLC7nkNkgzAfwam5AM3J5nJTctMgDevP9hg8Z4tcAqzCwBk_cRGs0ldC9R6M7FjmBIliDNQXsTzVCbNLFY6dxT7fJ5Bm_D4K5UJ06rx2nnaQOhV-vicQoPRUasnkZjF1YOoUbzcy6GwHc4DY9vtm-yJK1j6L6vcDhNyvh4B0vEKqtUOcjqKLW_Hfk3YXtq9jVta4TNDXITs9DZG5UANF1i4IxDCtKD9Y8PYlxWwnPT3s4uG-FsLUFmZxVf41_C6-YK9WXMng',
+  clear: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBEKEFeUSN3KY4efwhru4RUcYSkPTs6y4lGm32XkUVELtLJaGfdkXPOo_TCQacaAivbuSb-IPwDmuIcdc4mlqf0LOdNXkQLVIrPUtM4Mt-lcXTMQyKFo3vd3FOXz14dYJOLVTIJ9cXri8NNGoPqvcR9UTyPqdlh52AlzWlyISPY_2Z4OXWAPfh-MHDvDMvkKeLeagVuXGQXEFTvJ5f14AsS7cVrZmPPWF2N1maL0ncF3PY1vYJmYeszaYhb-ZZMMBcHDNUMk5Wp1qI',
+  night: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBqlaoTrcO96G8S7svgj75vs0_ipZku6_ZcKDd1alqM-HXqSOA6q7u0tEGtVtuFD3yCyjqkG6lxDadKiStwFTG0YtvlsIcRL9RWDy0VzmEo2EswWcZIYkRCAvUCSIAYZAYMkE1BWsccabuSFXA6KC9owjJyYDt9ptAfXvdwzp_XeIJnn_4A79huccjtc7UoIOAmrSs8eqdfLQVD5DDoglTL2TnFZHBc2QkjIfQU0ccYUPbwcJfFBilVkeg35gDIUN-2rmkfS0945_8'
 };
 
 function applyLanguage(lang = "th") {
@@ -227,7 +234,7 @@ function applyWeather(kind, current = null) {
   const headerIcon = document.getElementById("weather-header-icon");
   const headerLabel = document.getElementById("weather-header-label");
 
-  if (heroImage) heroImage.src = `https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1600&q=80`;
+  if (heroImage) heroImage.src = WEATHER_IMAGES[kind] || WEATHER_IMAGES.rain;
   if (heroIcon) heroIcon.textContent = copy;
   if (heroLabel) heroLabel.textContent = fullLabel;
   if (headerIcon) headerIcon.textContent = copy;
@@ -235,18 +242,23 @@ function applyWeather(kind, current = null) {
 }
 
 async function loadNanWeather() {
-  const url = "https://api.open-meteo.com/v1/forecast?latitude=18.7756&longitude=100.7730&current=temperature_2m,weather_code,wind_speed_10m&timezone=Asia%2FBangkok";
+  const url = "https://api.open-meteo.com/v1/forecast?latitude=18.7756&longitude=100.7730&current=temperature_2m,relative_humidity_2m,apparent_temperature,is_day,precipitation,rain,weather_code,cloud_cover,wind_speed_10m&timezone=Asia%2FBangkok";
   try {
     const response = await fetch(url, { cache: "no-store" });
     if (!response.ok) throw new Error(`Weather request failed: ${response.status}`);
     const data = await response.json();
     const current = data.current || {};
     const code = Number(current.weather_code || 0);
-    const hour = new Date().getHours();
+    const rain = Number(current.rain || 0);
+    const precipitation = Number(current.precipitation || 0);
+    const cloudCover = Number(current.cloud_cover || 0);
     let kind = "rain";
-    if (hour >= 20 || hour < 5) kind = "night";
-    else if ([1, 2, 3, 45, 48].includes(code)) kind = "cloudy";
-    else if ([0, 100].includes(code)) kind = "clear";
+    
+    if (Number(current.is_day) === 0) kind = "night";
+    else if (rain > 0 || precipitation > 0 || [51, 53, 55, 61, 63, 65, 66, 67, 80, 81, 82, 95, 96, 99].includes(code)) kind = "rain";
+    else if ([1, 2, 3, 45, 48].includes(code) || cloudCover >= 55) kind = "cloudy";
+    else kind = "clear";
+    
     applyWeather(kind, current);
   } catch (error) {
     console.warn("Using fallback Nan weather background.", error);
@@ -270,12 +282,7 @@ function currentPageKey() {
 }
 
 function navKeyFromLink(link) {
-  const label = link.textContent.trim().toLowerCase();
-  if (label.includes("discover") || label.includes("season") || label.includes("ฤดูกาล")) return "season";
-  if (label === "plan" || label.includes("วางแผน")) return "plan";
-  if (label.includes("map") || label === "แผน" || label.includes("แผนเที่ยว")) return "journey";
-  if (label.includes("stories") || label.includes("เรื่องเล่า")) return "stories";
-  return "";
+  return link.getAttribute("data-nav-key") || "";
 }
 
 function setActiveNav() {

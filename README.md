@@ -1,81 +1,101 @@
-# เตร็ดเตร่ trade-TRE
+# เตร็ดเตร่ (trade-TRE) — Nan Beyond Seasons
 
-เว็บวางแผนท่องเที่ยวน่านแบบอิงฤดูกาล ใช้ข้อมูลอากาศจริงจาก Open-Meteo, รองรับการสร้างแผนเที่ยวด้วย Gemini 2.5 Flash, แยกหน้าเป็นระบบ และมีการเปลี่ยนหน้าที่นุ่มขึ้น
+**เตร็ดเตร่ (trade-TRE)** คือเว็บแอปพลิเคชันวางแผนท่องเที่ยวจังหวัดน่านอัจฉริยะที่ออกแบบมาสำหรับโครงการ **Nan Beyond Seasons Hackathon 2026** เพื่อแก้ไขปัญหาการท่องเที่ยวกระจุกตัวเฉพาะฤดูหนาว โดยนำเสนอเสน่ห์ของน่านทั้ง 12 เดือนผ่านระบบสภาพอากาศจริง ร่วมกับ AI ในการสร้างแผนการเดินทางส่วนบุคคล (Personalized Itinerary)
 
-## โครงสร้างโปรเจกต์
+---
+
+## 🌟 จุดเด่นและฟีเจอร์หลัก (Key Features)
+
+1. **Weather-Aware Travel Planner (วางแผนอัจฉริยะตามสภาพอากาศจริง)**
+   - เชื่อมต่อ API สภาพอากาศจาก **Open-Meteo** (พิกัดตัวเมืองน่าน `18.7756, 100.7730`) แบบ Real-time เพื่อนำข้อมูลฝน เมฆ และอุณหภูมิมาวิเคราะห์ร่วมกับข้อมูลฤดูกาล
+
+2. **AI Itinerary Generator (Gemini 2.5 Flash Integration)**
+   - นำเข้าความต้องการผู้ใช้ (เดือน, เพื่อนร่วมทริป, ความเร็ว, สไตล์ที่ชอบ) และสภาพอากาศปัจจุบัน ส่งให้ **Gemini 2.5 Flash** ผ่านฝั่ง Backend เพื่อสร้างแผนท่องเที่ยว 3 วัน ที่มีความสดใหม่และสอดคล้องกับสภาพอากาศ ณ ขณะนั้น
+   - *หมายเหตุ:* มีระบบ **Fallback Itinerary** ที่ยังสามารถทำงานสร้างแผนจำลองได้ทันทีแม้ออฟไลน์หรือไม่ได้ระบุ API Key
+
+3. **Twelve Months, Twelve Souls (เรื่องเล่าทั้ง 12 เดือน)**
+   - หน้าเรื่องเล่าที่จัดแสดงความงามและเรื่องราวเฉพาะตัวของเมืองน่านครบทั้ง 12 เดือนในรูปแบบ **Bento Grid Layout** ที่ทันสมัย พร้อม Hover Effect แสดงข้อมูลเชิงลึก
+
+4. **Seamless Navigation & Transition (การนำทางที่ลื่นไหล)**
+   - การเปลี่ยนหน้าเพจด้วยระบบ Fade/Slide animation นุ่มนวล ไม่ติดขัด
+   - เมนูนำทางด้านล่าง (Bottom Navigation) ปรับเปลี่ยนสถานะ (Active State) ไดนามิกตามหน้าปัจจุบันอัตโนมัติ
+
+5. **Dual Language Support (EN/TH)**
+   - รองรับสองภาษา (ภาษาไทยและภาษาอังกฤษ) พร้อมปุ่มสลับภาษาที่อัปเดตคำแปลทั้งหน้าเว็บได้ในคลิกเดียว
+
+---
+
+## 📂 โครงสร้างโปรเจกต์ (Project Structure)
 
 ```text
 .
-├── public/
-│   ├── index.html              # หน้า Season - Nan
+├── public/                     # ส่วนหน้าบ้าน (Frontend - static files)
+│   ├── index.html              # หน้าหลักแสดงฤดูกาล (Season Highlights)
 │   ├── pages/
-│   │   ├── your-plan.html      # หน้า Map / Your Plan
-│   │   ├── journey.html        # หน้าแผนเที่ยว 3 วัน
-│   │   └── stories.html        # หน้า Twelve Months stories
+│   │   ├── your-plan.html      # ฟอร์มเลือกความต้องการสำหรับทริป
+│   │   ├── journey.html        # หน้าแสดงแผนการเดินทาง 3 วันที่สร้างเสร็จ
+│   │   └── stories.html        # หน้าเรื่องเล่า 12 เดือน (Bento Grid)
 │   └── assets/
 │       └── js/
-│           └── app.js          # transition, active nav, generate flow
-├── server/
-│   └── server.mjs              # static server + API routes
-├── .env.example
-├── package.json
-└── README.md
+│           └── app.js          # สคริปต์หลักฝั่งไคลเอนต์ (Language, Weather, Transitions)
+├── server/                     # ส่วนหลังบ้าน (Backend Server)
+│   └── server.mjs              # Node.js Static Server และ API Routes สำหรับ Gemini & Weather
+├── .env.example                # ไฟล์ตัวอย่างสำหรับตั้งค่า Environment Variables
+├── package.json                # สคริปต์สั่งรันระบบ
+└── README.md                   # เอกสารประกอบโครงการ
 ```
 
-## ความสามารถหลัก
+---
 
-- Flow แบบหลายหน้า: Season → Your Plan → Journey → Stories
-- Bottom navigation ขยับ active state ตามหน้าปัจจุบัน
-- เปลี่ยนหน้าด้วย fade/slide transition
-- ดึงสภาพอากาศจริงของตัวเมืองน่านจาก Open-Meteo ด้วยพิกัด `18.7756, 100.7730`
-- รองรับการ generate แผนเที่ยวผ่าน Gemini 2.5 Flash ที่ endpoint `/api/generate-trip`
-- ถ้าไม่ได้ตั้งค่า `GEMINI_API_KEY` ระบบจะใช้ fallback itinerary เพื่อให้ demo ยังใช้งานได้
+## 🛠️ วิธีการติดตั้งและรันใช้งาน (Getting Started)
 
-## วิธีรันในเครื่อง
+เนื่องจากระบบถูกสร้างขึ้นด้วย Native Node.js HTTP Module และ Vanilla Web Components ทำให้ **ไม่จำเป็นต้องติดตั้ง External Dependencies เพิ่มเติม** สามารถรันได้ทันทีด้วย Node.js (เวอร์ชัน 18 ขึ้นไป)
 
+### 1. โคลนและเปิดโปรเจกต์
+เปิด Terminal ในโฟลเดอร์โปรเจกต์:
 ```powershell
+# รันเซิร์ฟเวอร์จำลองในโหมดนักพัฒนา
 npm run dev
 ```
 
-จากนั้นเปิด:
-
+### 2. เข้าใช้งานหน้าเว็บ
+เมื่อรันสำเร็จ เซิร์ฟเวอร์จะเปิดที่พอร์ต `5173` ให้เปิดเบราว์เซอร์แล้วเข้าไปที่:
 ```text
 http://localhost:5173
 ```
 
-## เปิดใช้ Gemini Generation
+---
 
-สร้างไฟล์ `.env` โดยดูตัวอย่างจาก `.env.example`:
+## 🔑 การตั้งค่าใช้งานระบบสร้างแผนด้วย AI (Gemini Key Setup)
 
-```text
-GEMINI_API_KEY=your_gemini_api_key_here
-PORT=5173
-```
+หากต้องการเปิดใช้งานระบบสร้างแผนเดินทาง 3 วันด้วย AI จริงๆ ให้ดำเนินการตั้งค่าตามขั้นตอนนี้:
 
-แล้ว restart server:
+1. คัดลอกไฟล์ `.env.example` แล้วเปลี่ยนชื่อเป็น `.env` ในโฟลเดอร์หลักของโปรเจกต์:
+   ```text
+   GEMINI_API_KEY=ใส่คีย์ของคุณที่นี่
+   PORT=5173
+   ```
+2. ใส่ Google Gemini API Key ของคุณที่ช่อง `GEMINI_API_KEY`
+3. ทำการรีสตาร์ทเซิร์ฟเวอร์ โดยการกด `Ctrl + C` แล้วพิมพ์ `npm run dev` อีกครั้ง
+4. เมื่อเข้าหน้าเว็บไปที่เมนู **"วางแผน"** ใส่รายละเอียดแล้วกด **"Generate My Experience"** ระบบจะส่งข้อมูลไปให้ Gemini วิเคราะห์และเรนเดอร์แผนจริงทันที!
 
-```powershell
-npm run dev
-```
+---
 
-เมื่อกด `Generate My Experience` ในหน้า Your Plan ระบบจะส่งข้อมูลฟอร์มไปที่ `/api/generate-trip` จากนั้น server จะดึงข้อมูลอากาศจริงจาก Open-Meteo มาประกอบ prompt และให้ Gemini ตอบกลับเป็น JSON สำหรับแสดงในหน้า Journey
+## 📡 API Endpoints
 
-## API Routes
+- `GET /api/weather` - เรียกดูข้อมูลสภาพอากาศแบบ Real-time ของจังหวัดน่าน
+- `POST /api/generate-trip` - สร้างข้อมูลทริปท่องเที่ยว 3 วัน โดยรับ Input เป็น JSON รูปแบบดังนี้:
+  ```json
+  {
+    "month": "Aug",
+    "pace": "slow",
+    "group": "couple",
+    "vibes": ["Photography", "Peace"]
+  }
+  ```
 
-- `GET /api/weather` ดึงสภาพอากาศปัจจุบันของตัวเมืองน่านจาก Open-Meteo
-- `POST /api/generate-trip` สร้างแผนเที่ยว 3 วันจากข้อมูลในฟอร์ม
+---
 
-ตัวอย่างการทดสอบ API:
+## 📝 หมายเหตุความปลอดภัย
 
-```powershell
-Invoke-RestMethod -Uri http://localhost:5173/api/generate-trip `
-  -Method Post `
-  -ContentType "application/json" `
-  -Body '{"month":"Aug","pace":"slow","group":"couple","vibes":["Photography","Peace"]}'
-```
-
-## หมายเหตุ
-
-- ห้ามใส่ `GEMINI_API_KEY` ไว้ใน JavaScript ฝั่ง browser เพราะ key จะหลุดได้ง่าย
-- ข้อมูลอากาศมาจาก Open-Meteo แบบ real-time
-- ถ้า Gemini หรือ network ใช้งานไม่ได้ ระบบยังแสดง fallback itinerary เพื่อให้ flow ของเว็บยังใช้งานได้
+- ตัวโปรเจกต์ไม่นำ `GEMINI_API_KEY` ไปเขียนไว้ในฝั่ง Frontend/Client (JavaScript) เพื่อป้องกันความปลอดภัยของข้อมูล Key ไม่ให้หลุดลอยสู่สาธารณะ การติดต่อทั้งหมดจะถูกเชื่อมผ่าน Proxy Backend ใน `server.mjs` เท่านั้น

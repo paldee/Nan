@@ -129,9 +129,9 @@
 </head>
 <body class="bg-background text-on-background font-body-md min-h-screen antialiased overflow-x-hidden overflow-y-auto selection:bg-primary-fixed selection:text-on-primary-fixed pb-24 md:pb-0 scroll-smooth">
         <header
-                class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4 bg-background/80 dark:bg-background/80 backdrop-blur-xl bg-background/70">
-                <a class="font-label-caps text-sm md:text-base text-primary dark:text-primary-fixed uppercase tracking-wider hover:text-primary-container transition-colors" href="index.html">เตร็ดเตร่</a>
-                <nav class="hidden md:flex gap-6 items-center font-label-caps text-sm uppercase tracking-wider">
+                class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-margin-mobile md:px-margin-desktop py-6 bg-background/80 dark:bg-background/80 backdrop-blur-xl bg-background/70">
+                <a class="font-label-caps text-base md:text-xl text-primary dark:text-primary-container uppercase tracking-wider hover:text-primary-container transition-colors" href="index.html">เตร็ดเตร่</a>
+                <nav class="hidden md:flex gap-6 items-center font-label-caps text-base uppercase tracking-wider">
                         <a class="text-primary dark:text-primary-fixed font-bold border-b-2 border-primary dark:border-primary-fixed pb-1 active:scale-95 duration-200"
                                 href="index.html" data-i18n="navSeason">ฤดูกาล</a>
                         <a class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed transition-colors"
@@ -148,13 +148,13 @@
                 </div>
         </header>
         <main class="min-h-screen overflow-y-auto">
-                <section id="season" class="relative h-[921px] min-h-[600px] w-full flex items-end pb-24 px-margin-mobile md:px-margin-desktop">
+                <section id="season" class="relative h-[100dvh] min-h-[600px] w-full flex items-end pb-24 px-margin-mobile md:px-margin-desktop">
                         <div class="absolute inset-0 z-0">
                                 <img id="weather-hero-image" class="w-full h-full object-cover"
                                         data-alt="A breathtaking, high-end editorial landscape photograph of lush, vibrant green rice terraces in Sapan, Nan, Thailand during the rainy season. Thick, moody mist clings to the rolling mountains in the background. The lighting is soft and diffused, typical of an overcast August morning, enhancing the deep emerald greens and earthy browns. The composition is expansive, inviting, and tranquil, fitting for a premium travel magazine."
                                         src="https://lh3.googleusercontent.com/aida-public/AB6AXuCKDhyiN5DjiaBIMSR34rOLIDu-mKNJ70YSiYrGJBzbRyL2yXZiN7sFYU5R8Fmk6EBmWV8Q7yoLso7XClAcEANU4hgFd89YVdrBPeOrllVh6xTkGNz3VCdzJzRgnhVpkbAs4GizoiZioJlQz08RhjnDRDKnrwZ-YpjyAjGvNQ-Is-Ael37tnmpj-lfaVTDRjYLb2pu68MJPvzzlDHDYKnhi-Rjwd9XYdmZrrjhKgcvTASN7WnWlt7T2hcCxSKm94AOrZ406O-NH96U" />
                                 <div
-                                        class="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent">
+                                        class="absolute inset-0 bg-gradient-to-t from-background via-background/50 to-transparent">
                                 </div>
                         </div>
                         <div class="relative z-10 w-full max-w-container-max mx-auto md:w-2/3 lg:w-1/2 ml-2 md:ml-4 lg:ml-6">
@@ -231,67 +231,115 @@
                                         แต่ละเดือนของน่านมีจังหวะไม่เหมือนกัน ใช้คู่มือนี้เลือกอารมณ์ เส้นทาง และประสบการณ์ท้องถิ่นให้เหมาะกับช่วงเดินทางของคุณ</p>
                         </div>
                         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-gutter">
-                                <article class="rounded-xl border border-outline-variant/30 bg-surface-container-low p-5">
-                                        <p class="font-label-caps text-label-caps text-secondary uppercase tracking-wider mb-2">January</p>
-                                        <h3 class="font-headline-sm text-headline-sm text-primary mb-2">Cool Mist</h3>
-                                        <p class="font-body-md text-body-md text-on-surface-variant">เหมาะกับเช้าหนาวบนภูเขา คาเฟ่อบอุ่น และแสงนุ่มของเมืองเก่า</p>
-                                </article>
-                                <article class="rounded-xl border border-outline-variant/30 bg-surface-container-low p-5">
-                                        <p class="font-label-caps text-label-caps text-secondary uppercase tracking-wider mb-2">February</p>
-                                        <h3 class="font-headline-sm text-headline-sm text-primary mb-2">Pink Bloom</h3>
-                                        <p class="font-body-md text-body-md text-on-surface-variant">เหมาะกับเส้นทางดอกไม้ จุดชมวิวโรแมนติก และเดินวัดแบบสบาย ๆ</p>
-                                </article>
-                                <article class="rounded-xl border border-outline-variant/30 bg-surface-container-low p-5">
-                                        <p class="font-label-caps text-label-caps text-secondary uppercase tracking-wider mb-2">March</p>
-                                        <h3 class="font-headline-sm text-headline-sm text-primary mb-2">River's Ebb</h3>
-                                        <p class="font-body-md text-body-md text-on-surface-variant">เดือนจังหวะช้า เหมาะกับชุมชนริมน้ำ ตลาดท้องถิ่น และวัฒนธรรมเมืองน่าน</p>
-                                </article>
-                                <article class="rounded-xl border border-outline-variant/30 bg-surface-container-low p-5">
-                                        <p class="font-label-caps text-label-caps text-secondary uppercase tracking-wider mb-2">April</p>
-                                        <h3 class="font-headline-sm text-headline-sm text-primary mb-2">Water & Light</h3>
-                                        <p class="font-body-md text-body-md text-on-surface-variant">เต็มไปด้วยพลังสงกรานต์ พิธีวัด และถนนเมืองเก่าที่คึกคัก</p>
-                                </article>
-                                <article class="rounded-xl border border-outline-variant/30 bg-surface-container-low p-5">
-                                        <p class="font-label-caps text-label-caps text-secondary uppercase tracking-wider mb-2">May</p>
-                                        <h3 class="font-headline-sm text-headline-sm text-primary mb-2">First Rain</h3>
-                                        <p class="font-body-md text-body-md text-on-surface-variant">สีเขียวแรกเริ่มกลับมา เหมาะกับคาเฟ่ เวิร์กช็อปงานคราฟต์ และเส้นทางเบา ๆ</p>
-                                </article>
-                                <article class="rounded-xl border border-outline-variant/30 bg-surface-container-low p-5">
-                                        <p class="font-label-caps text-label-caps text-secondary uppercase tracking-wider mb-2">June</p>
-                                        <h3 class="font-headline-sm text-headline-sm text-primary mb-2">Green Start</h3>
-                                        <p class="font-body-md text-body-md text-on-surface-variant">ทุ่งนาเริ่มเขียว ขับรถผ่านหุบเขาและหมู่บ้านได้เย็นสบายขึ้น</p>
-                                </article>
-                                <article class="rounded-xl border border-outline-variant/30 bg-surface-container-low p-5">
-                                        <p class="font-label-caps text-label-caps text-secondary uppercase tracking-wider mb-2">July</p>
-                                        <h3 class="font-headline-sm text-headline-sm text-primary mb-2">Rice Fields</h3>
-                                        <p class="font-body-md text-body-md text-on-surface-variant">เหมาะกับนาขั้นบันได โฮมสเตย์ และการถ่ายภาพฤดูฝน</p>
-                                </article>
-                                <article class="rounded-xl border border-primary/30 bg-primary-fixed/30 p-5">
-                                        <p class="font-label-caps text-label-caps text-secondary uppercase tracking-wider mb-2">August</p>
-                                        <h3 class="font-headline-sm text-headline-sm text-primary mb-2">Emerald Rain</h3>
-                                        <p class="font-body-md text-body-md text-on-surface-variant">ฤดูเขียวเต็มที่ เหมาะกับหมอก น้ำตก สะปัน และ hidden gems กลางหุบเขา</p>
-                                </article>
-                                <article class="rounded-xl border border-outline-variant/30 bg-surface-container-low p-5">
-                                        <p class="font-label-caps text-label-caps text-secondary uppercase tracking-wider mb-2">September</p>
-                                        <h3 class="font-headline-sm text-headline-sm text-primary mb-2">Mist Trails</h3>
-                                        <p class="font-body-md text-body-md text-on-surface-variant">อากาศสด เมฆสวย และเส้นทางหมู่บ้านบนภูเขาที่ยืดหยุ่นตามฝน</p>
-                                </article>
-                                <article class="rounded-xl border border-outline-variant/30 bg-surface-container-low p-5">
-                                        <p class="font-label-caps text-label-caps text-secondary uppercase tracking-wider mb-2">October</p>
-                                        <h3 class="font-headline-sm text-headline-sm text-primary mb-2">Cool Shift</h3>
-                                        <p class="font-body-md text-body-md text-on-surface-variant">เริ่มเย็นลง เหมาะกับเดินธรรมชาติและสำรวจเส้นทางก่อนเข้าหนาว</p>
-                                </article>
-                                <article class="rounded-xl border border-outline-variant/30 bg-surface-container-low p-5">
-                                        <p class="font-label-caps text-label-caps text-secondary uppercase tracking-wider mb-2">November</p>
-                                        <h3 class="font-headline-sm text-headline-sm text-primary mb-2">Winter Air</h3>
-                                        <p class="font-body-md text-body-md text-on-surface-variant">เช้าอากาศใส ถนนภูเขา และจุดวัฒนธรรมให้จังหวะที่พอดี</p>
-                                </article>
-                                <article class="rounded-xl border border-outline-variant/30 bg-surface-container-low p-5">
-                                        <p class="font-label-caps text-label-caps text-secondary uppercase tracking-wider mb-2">December</p>
-                                        <h3 class="font-headline-sm text-headline-sm text-primary mb-2">Sea of Mist</h3>
-                                        <p class="font-body-md text-body-md text-on-surface-variant">ตื่นเช้าเพื่อจุดชมวิว อากาศเย็น และภาพฤดูหนาวคลาสสิกของน่าน</p>
-                                </article>
-                        </div>
+                                <a href="pages/your-plan.html" class="block relative rounded-[24px] overflow-hidden group cursor-pointer border border-outline-variant/30 shadow-sm h-[320px]">
+                                        <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDFYAziXrs-hKRP_0cVIv_HDUY_8xtGvq7gbNWlBquvzipYkle-PFzsT1A788O7hltbOJ3o26TbWOf5OE2Ry8SAVtM7nEmeUYNw1TQLqHuoxxA5TU89zYb-oemctKwfqiA5teLOQ0wm2loTVWWBqNbTf4deQkZVIvthdgfNSuWcmYsfl0n3oUhSaTB2aSB9mzJwvAdpSolqkkocX6GZPbdybK_1qauw6GWibspM-6s_RCaMPQ43M_Yb7yXaMgodaN79DztwC4b7FsU')"></div>
+                                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent z-10 group-hover:bg-black/60 transition-colors duration-500"></div>
+                                        <div class="relative z-20 p-6 flex flex-col h-full justify-end group-hover:translate-y-[-8px] transition-transform duration-500">
+                                                <p class="font-label-caps text-label-caps text-primary-container uppercase tracking-wider mb-2">January</p>
+                                                <h3 class="font-headline-sm text-headline-sm text-white mb-2 group-hover:text-white transition-colors">Cool Mist</h3>
+                                                <p class="font-body-md text-body-md text-white/90 opacity-0 group-hover:opacity-100 transition-opacity duration-500 h-0 group-hover:h-auto overflow-hidden">เหมาะกับเช้าหนาวบนภูเขา คาเฟ่อบอุ่น และแสงนุ่มของเมืองเก่า</p>
+                                        </div>
+                                </a>
+                                <a href="pages/your-plan.html" class="block relative rounded-[24px] overflow-hidden group cursor-pointer border border-outline-variant/30 shadow-sm h-[320px]">
+                                        <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBEKEFeUSN3KY4efwhru4RUcYSkPTs6y4lGm32XkUVELtLJaGfdkXPOo_TCQacaAivbuSb-IPwDmuIcdc4mlqf0LOdNXkQLVIrPUtM4Mt-lcXTMQyKFo3vd3FOXz14dYJOLVTIJ9cXri8NNGoPqvcR9UTyPqdlh52AlzWlyISPY_2Z4OXWAPfh-MHDvDMvkKeLeagVuXGQXEFTvJ5f14AsS7cVrZmPPWF2N1maL0ncF3PY1vYJmYeszaYhb-ZZMMBcHDNUMk5Wp1qI')"></div>
+                                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent z-10 group-hover:bg-black/60 transition-colors duration-500"></div>
+                                        <div class="relative z-20 p-6 flex flex-col h-full justify-end group-hover:translate-y-[-8px] transition-transform duration-500">
+                                                <p class="font-label-caps text-label-caps text-primary-container uppercase tracking-wider mb-2">February</p>
+                                                <h3 class="font-headline-sm text-headline-sm text-white mb-2 group-hover:text-white transition-colors">Pink Bloom</h3>
+                                                <p class="font-body-md text-body-md text-white/90 opacity-0 group-hover:opacity-100 transition-opacity duration-500 h-0 group-hover:h-auto overflow-hidden">เหมาะกับเส้นทางดอกไม้ จุดชมวิวโรแมนติก และเดินวัดแบบสบาย ๆ</p>
+                                        </div>
+                                </a>
+                                <a href="pages/your-plan.html" class="block relative rounded-[24px] overflow-hidden group cursor-pointer border border-outline-variant/30 shadow-sm h-[320px]">
+                                        <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuChkvfbPOIOIBcjisHfy9BMYqwsHaczCBSxcogk5T2Ft3PJLhY6gJVSlUdZx4DSe4tiDJPS4rCIlZHwmoYzWTW5ZADo0oxLXqfGlYr2ELGdva1kYJ_Ai9grXSWoIaC83ZCWaviqxdjNwDLBXJRHsv64WR9VqSbheUpGr8yJx8F6Dshzoj4qx5u61QiW5-xrjRD6ypB8uoVIsoJc853dUWWyZKfG8-zD6eq3sv0sf9FYenZMUmiPkXeCBfRLgWH9QMtsWCHuLtmlumk')"></div>
+                                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent z-10 group-hover:bg-black/60 transition-colors duration-500"></div>
+                                        <div class="relative z-20 p-6 flex flex-col h-full justify-end group-hover:translate-y-[-8px] transition-transform duration-500">
+                                                <p class="font-label-caps text-label-caps text-primary-container uppercase tracking-wider mb-2">March</p>
+                                                <h3 class="font-headline-sm text-headline-sm text-white mb-2 group-hover:text-white transition-colors">River's Ebb</h3>
+                                                <p class="font-body-md text-body-md text-white/90 opacity-0 group-hover:opacity-100 transition-opacity duration-500 h-0 group-hover:h-auto overflow-hidden">เดือนจังหวะช้า เหมาะกับชุมชนริมน้ำ ตลาดท้องถิ่น และวัฒนธรรมเมืองน่าน</p>
+                                        </div>
+                                </a>
+                                <a href="pages/your-plan.html" class="block relative rounded-[24px] overflow-hidden group cursor-pointer border border-outline-variant/30 shadow-sm h-[320px]">
+                                        <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBFnZ0S50nXpa-P7yPZgIBhIAaI2BCQSoD2h0u4GuEH-i1fLl3a4TetyOJ46HUUguRC6fthtkXNSRLO6cexu6jQxKY4KG6HTEBtBaTNMuO0Q2W18HnqMJ4T4R7-TjQ6Cr1TtQrhTyaiHwCtAhiV1cf4Czh9Xzo04jGs8YeeyOzOlPP4SY2biILZ5o_UAM9OcpxNCIDPUdjqGE474OyElm9tmWXnh1mi2r0enhUsa697gifh-GejD4kO6wM5R3s0S5OekbIwSjNlpiA')"></div>
+                                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent z-10 group-hover:bg-black/60 transition-colors duration-500"></div>
+                                        <div class="relative z-20 p-6 flex flex-col h-full justify-end group-hover:translate-y-[-8px] transition-transform duration-500">
+                                                <p class="font-label-caps text-label-caps text-primary-container uppercase tracking-wider mb-2">April</p>
+                                                <h3 class="font-headline-sm text-headline-sm text-white mb-2 group-hover:text-white transition-colors">Water & Light</h3>
+                                                <p class="font-body-md text-body-md text-white/90 opacity-0 group-hover:opacity-100 transition-opacity duration-500 h-0 group-hover:h-auto overflow-hidden">เต็มไปด้วยพลังสงกรานต์ พิธีวัด และถนนเมืองเก่าที่คึกคัก</p>
+                                        </div>
+                                </a>
+                                <a href="pages/your-plan.html" class="block relative rounded-[24px] overflow-hidden group cursor-pointer border border-outline-variant/30 shadow-sm h-[320px]">
+                                        <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" style="background-image: url('https://images.unsplash.com/photo-1518134346374-184f9d21cea2?auto=format&fit=crop&w=800&q=80')"></div>
+                                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent z-10 group-hover:bg-black/60 transition-colors duration-500"></div>
+                                        <div class="relative z-20 p-6 flex flex-col h-full justify-end group-hover:translate-y-[-8px] transition-transform duration-500">
+                                                <p class="font-label-caps text-label-caps text-primary-container uppercase tracking-wider mb-2">May</p>
+                                                <h3 class="font-headline-sm text-headline-sm text-white mb-2 group-hover:text-white transition-colors">First Rain</h3>
+                                                <p class="font-body-md text-body-md text-white/90 opacity-0 group-hover:opacity-100 transition-opacity duration-500 h-0 group-hover:h-auto overflow-hidden">สีเขียวแรกเริ่มกลับมา เหมาะกับคาเฟ่ เวิร์กช็อปงานคราฟต์ และเส้นทางเบา ๆ</p>
+                                        </div>
+                                </a>
+                                <a href="pages/your-plan.html" class="block relative rounded-[24px] overflow-hidden group cursor-pointer border border-outline-variant/30 shadow-sm h-[320px]">
+                                        <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" style="background-image: url('https://images.unsplash.com/photo-1542640244-7e672d62082f?auto=format&fit=crop&w=800&q=80')"></div>
+                                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent z-10 group-hover:bg-black/60 transition-colors duration-500"></div>
+                                        <div class="relative z-20 p-6 flex flex-col h-full justify-end group-hover:translate-y-[-8px] transition-transform duration-500">
+                                                <p class="font-label-caps text-label-caps text-primary-container uppercase tracking-wider mb-2">June</p>
+                                                <h3 class="font-headline-sm text-headline-sm text-white mb-2 group-hover:text-white transition-colors">Green Start</h3>
+                                                <p class="font-body-md text-body-md text-white/90 opacity-0 group-hover:opacity-100 transition-opacity duration-500 h-0 group-hover:h-auto overflow-hidden">ทุ่งนาเริ่มเขียว ขับรถผ่านหุบเขาและหมู่บ้านได้เย็นสบายขึ้น</p>
+                                        </div>
+                                </a>
+                                <a href="pages/your-plan.html" class="block relative rounded-[24px] overflow-hidden group cursor-pointer border border-outline-variant/30 shadow-sm h-[320px]">
+                                        <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" style="background-image: url('https://images.unsplash.com/photo-1528181304800-259b08848526?auto=format&fit=crop&w=800&q=80')"></div>
+                                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent z-10 group-hover:bg-black/60 transition-colors duration-500"></div>
+                                        <div class="relative z-20 p-6 flex flex-col h-full justify-end group-hover:translate-y-[-8px] transition-transform duration-500">
+                                                <p class="font-label-caps text-label-caps text-primary-container uppercase tracking-wider mb-2">July</p>
+                                                <h3 class="font-headline-sm text-headline-sm text-white mb-2 group-hover:text-white transition-colors">Rice Fields</h3>
+                                                <p class="font-body-md text-body-md text-white/90 opacity-0 group-hover:opacity-100 transition-opacity duration-500 h-0 group-hover:h-auto overflow-hidden">เหมาะกับนาขั้นบันได โฮมสเตย์ และการถ่ายภาพฤดูฝน</p>
+                                        </div>
+                                </a>
+                                <a href="pages/your-plan.html" class="block relative rounded-[24px] overflow-hidden group cursor-pointer border border-primary/50 ring-2 ring-primary/30 shadow-sm h-[320px]">
+                                        <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuA2LNfTLC7nkNkgzAfwam5AM3J5nJTctMgDevP9hg8Z4tcAqzCwBk_cRGs0ldC9R6M7FjmBIliDNQXsTzVCbNLFY6dxT7fJ5Bm_D4K5UJ06rx2nnaQOhV-vicQoPRUasnkZjF1YOoUbzcy6GwHc4DY9vtm-yJK1j6L6vcDhNyvh4B0vEKqtUOcjqKLW_Hfk3YXtq9jVta4TNDXITs9DZG5UANF1i4IxDCtKD9Y8PYlxWwnPT3s4uG-FsLUFmZxVf41_C6-YK9WXMng')"></div>
+                                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent z-10 group-hover:bg-black/60 transition-colors duration-500"></div>
+                                        <div class="relative z-20 p-6 flex flex-col h-full justify-end group-hover:translate-y-[-8px] transition-transform duration-500">
+                                                <p class="font-label-caps text-label-caps text-primary-container uppercase tracking-wider mb-2">August</p>
+                                                <h3 class="font-headline-sm text-headline-sm text-white mb-2 group-hover:text-white transition-colors">Emerald Rain</h3>
+                                                <p class="font-body-md text-body-md text-white/90 opacity-0 group-hover:opacity-100 transition-opacity duration-500 h-0 group-hover:h-auto overflow-hidden">ฤดูเขียวเต็มที่ เหมาะกับหมอก น้ำตก สะปัน และ hidden gems กลางหุบเขา</p>
+                                        </div>
+                                </a>
+                                <a href="pages/your-plan.html" class="block relative rounded-[24px] overflow-hidden group cursor-pointer border border-outline-variant/30 shadow-sm h-[320px]">
+                                        <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" style="background-image: url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=800&q=80')"></div>
+                                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent z-10 group-hover:bg-black/60 transition-colors duration-500"></div>
+                                        <div class="relative z-20 p-6 flex flex-col h-full justify-end group-hover:translate-y-[-8px] transition-transform duration-500">
+                                                <p class="font-label-caps text-label-caps text-primary-container uppercase tracking-wider mb-2">September</p>
+                                                <h3 class="font-headline-sm text-headline-sm text-white mb-2 group-hover:text-white transition-colors">Mist Trails</h3>
+                                                <p class="font-body-md text-body-md text-white/90 opacity-0 group-hover:opacity-100 transition-opacity duration-500 h-0 group-hover:h-auto overflow-hidden">อากาศสด เมฆสวย และเส้นทางหมู่บ้านบนภูเขาที่ยืดหยุ่นตามฝน</p>
+                                        </div>
+                                </a>
+                                <a href="pages/your-plan.html" class="block relative rounded-[24px] overflow-hidden group cursor-pointer border border-outline-variant/30 shadow-sm h-[320px]">
+                                        <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" style="background-image: url('https://images.unsplash.com/photo-1549479383-7c39050d276b?auto=format&fit=crop&w=800&q=80')"></div>
+                                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent z-10 group-hover:bg-black/60 transition-colors duration-500"></div>
+                                        <div class="relative z-20 p-6 flex flex-col h-full justify-end group-hover:translate-y-[-8px] transition-transform duration-500">
+                                                <p class="font-label-caps text-label-caps text-primary-container uppercase tracking-wider mb-2">October</p>
+                                                <h3 class="font-headline-sm text-headline-sm text-white mb-2 group-hover:text-white transition-colors">Cool Shift</h3>
+                                                <p class="font-body-md text-body-md text-white/90 opacity-0 group-hover:opacity-100 transition-opacity duration-500 h-0 group-hover:h-auto overflow-hidden">เริ่มเย็นลง เหมาะกับเดินธรรมชาติและสำรวจเส้นทางก่อนเข้าหนาว</p>
+                                        </div>
+                                </a>
+                                <a href="pages/your-plan.html" class="block relative rounded-[24px] overflow-hidden group cursor-pointer border border-outline-variant/30 shadow-sm h-[320px]">
+                                        <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" style="background-image: url('https://images.unsplash.com/photo-1517697471339-4aa32003c11a?auto=format&fit=crop&w=800&q=80')"></div>
+                                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent z-10 group-hover:bg-black/60 transition-colors duration-500"></div>
+                                        <div class="relative z-20 p-6 flex flex-col h-full justify-end group-hover:translate-y-[-8px] transition-transform duration-500">
+                                                <p class="font-label-caps text-label-caps text-primary-container uppercase tracking-wider mb-2">November</p>
+                                                <h3 class="font-headline-sm text-headline-sm text-white mb-2 group-hover:text-white transition-colors">Winter Air</h3>
+                                                <p class="font-body-md text-body-md text-white/90 opacity-0 group-hover:opacity-100 transition-opacity duration-500 h-0 group-hover:h-auto overflow-hidden">เช้าอากาศใส ถนนภูเขา และจุดวัฒนธรรมให้จังหวะที่พอดี</p>
+                                        </div>
+                                </a>
+                                <a href="pages/your-plan.html" class="block relative rounded-[24px] overflow-hidden group cursor-pointer border border-outline-variant/30 shadow-sm h-[320px]">
+                                        <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBqlaoTrcO96G8S7svgj75vs0_ipZku6_ZcKDd1alqM-HXqSOA6q7u0tEGtVtuFD3yCyjqkG6lxDadKiStwFTG0YtvlsIcRL9RWDy0VzmEo2EswWcZIYkRCAvUCSIAYZAYMkE1BWsccabuSFXA6KC9owjJyYDt9ptAfXvdwzp_XeIJnn_4A79huccjtc7UoIOAmrSs8eqdfLQVD5DDoglTL2TnFZHBc2QkjIfQU0ccYUPbwcJfFBilVkeg35gDIUN-2rmkfS0945_8')"></div>
+                                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent z-10 group-hover:bg-black/60 transition-colors duration-500"></div>
+                                        <div class="relative z-20 p-6 flex flex-col h-full justify-end group-hover:translate-y-[-8px] transition-transform duration-500">
+                                                <p class="font-label-caps text-label-caps text-primary-container uppercase tracking-wider mb-2">December</p>
+                                                <h3 class="font-headline-sm text-headline-sm text-white mb-2 group-hover:text-white transition-colors">Sea of Mist</h3>
+                                                <p class="font-body-md text-body-md text-white/90 opacity-0 group-hover:opacity-100 transition-opacity duration-500 h-0 group-hover:h-auto overflow-hidden">ตื่นเช้าเพื่อจุดชมวิว อากาศเย็น และภาพฤดูหนาวคลาสสิกของน่าน</p>
+                                        </div>
+                                </a>
+</div>
                         <p class="mt-8 font-data-mono text-data-mono text-on-surface-variant" data-i18n="sourcesNote">
                                 ข้อมูลสถานที่และเทศกาลอ้างอิงจาก ททท. จังหวัดน่าน, 5 Must Do In Nan และข้อมูลอากาศจริงจาก Open-Meteo
                         </p>

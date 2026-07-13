@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html class="light scroll-smooth" lang="en">
 <head>
         <meta charset="utf-8" />
@@ -127,17 +127,17 @@
                 .page-shell { width: min(100%, 1280px); margin-inline: auto; }
         </style>
 </head>
-<body class="bg-background text-on-background font-body-md min-h-screen antialiased overflow-x-hidden overflow-y-auto selection:bg-primary-fixed selection:text-on-primary-fixed pb-24 md:pb-0 scroll-smooth">
+<body class="bg-background text-on-background font-body-md min-h-screen antialiased overflow-x-hidden overflow-y-auto selection:bg-primary-fixed selection:text-white-fixed pb-24 md:pb-0 scroll-smooth">
         <header
                 class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4 bg-background/80 dark:bg-background/80 backdrop-blur-xl bg-background/70">
                 <a class="font-label-caps text-sm md:text-base text-primary dark:text-primary-fixed uppercase tracking-wider hover:text-primary-container transition-colors" href="../index.html">เตร็ดเตร่</a>
-                <nav class="hidden md:flex gap-6 items-center font-label-caps text-sm uppercase tracking-wider">
-                        <a class="text-primary dark:text-primary-fixed font-bold border-b-2 border-primary dark:border-primary-fixed pb-1 active:scale-95 duration-200"
-                                href="../index.html" data-i18n="navSeason">ฤดูกาล</a>
+                <nav class="hidden md:flex gap-6 items-center font-label-caps text-base uppercase tracking-wider">
                         <a class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed transition-colors"
-                                href="your-plan.html" data-i18n="navPlan">แผนเที่ยว</a>
+                                href="../index.html" data-i18n="navSeason" data-nav-key="season">ฤดูกาล</a>
                         <a class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed transition-colors"
-                                href="stories.html" data-i18n="navStories">เรื่องเล่า</a>
+                                href="your-plan.html" data-i18n="navPlan" data-nav-key="plan">แผนเที่ยว</a>
+                        <a class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed transition-colors"
+                                href="stories.html" data-i18n="navStories" data-nav-key="stories">เรื่องเล่า</a>
                 </nav>
                 <div class="flex items-center gap-3 text-primary dark:text-primary-fixed">
                         <button id="lang-toggle" type="button" class="inline-flex items-center gap-2 rounded-full border border-outline-variant/60 bg-surface-container-low px-3 py-1.5 text-sm font-label-caps uppercase tracking-wider text-on-surface-variant transition hover:border-primary hover:text-primary">
@@ -169,7 +169,7 @@
                         <!-- Day 1 Header -->
                         <div class="relative z-10 flex items-center gap-4 mb-12 md:justify-center">
                                 <div
-                                        class="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-on-primary font-headline-sm text-headline-sm">
+                                        class="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white font-headline-sm text-headline-sm">
                                         1</div>
                                 <h2 class="font-headline-md text-headline-md text-on-surface">Arrival &amp; The Valleys
                                 </h2>
@@ -218,7 +218,7 @@
                                                         class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-80">
                                                 </div>
                                                 <div class="absolute bottom-4 left-4 right-4">
-                                                        <p class="font-body-md text-body-md text-on-primary">
+                                                        <p class="font-body-md text-body-md text-white">
                                                                 <span class="font-bold">Local Insight:</span> Sapan
                                                                 remains an agrarian community where traditional 'เธฅเธเนเธเธ'
                                                                 (community harvesting) is still occasionally practiced
@@ -290,83 +290,32 @@
                 </section>
         </section>
         </main>
+        <footer class="py-12 bg-surface text-center border-t border-outline-variant/20 mt-12 mb-20 md:mb-0">
+                <p class="font-data-mono text-data-mono text-on-surface-variant/70">Crafted for Nan Beyond Seasons Hackathon</p>
+        </footer>
         <nav
                 class="md:hidden fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-safe h-20 bg-background/90 dark:bg-background/90 backdrop-blur-xl border-t border-outline-variant/20 rounded-t-xl">
-                <a class="flex flex-col items-center justify-center text-primary dark:text-primary-fixed-dim bg-primary-fixed/20 rounded-xl px-4 py-2 hover:bg-surface-container-low transition-all"
-                        href="../index.html">
+                <a class="flex flex-col items-center justify-center text-on-surface-variant/70 dark:text-surface-variant/70 px-4 py-2 hover:bg-surface-container-low transition-all"
+                        href="../index.html" data-nav-key="season">
                         <span class="material-symbols-outlined mb-1">explore</span>
                         <span class="font-label-caps text-label-caps">ฤดูกาล</span>
                 </a>
                 <a class="flex flex-col items-center justify-center text-on-surface-variant/70 dark:text-surface-variant/70 px-4 py-2 hover:bg-surface-container-low transition-all"
-                        href="your-plan.html">
+                        href="your-plan.html" data-nav-key="plan">
                         <span class="material-symbols-outlined mb-1">auto_awesome</span>
                         <span class="font-label-caps text-label-caps">วางแผน</span>
                 </a>
                 <a class="flex flex-col items-center justify-center text-on-surface-variant/70 dark:text-surface-variant/70 px-4 py-2 hover:bg-surface-container-low transition-all"
-                        href="your-plan.html">
+                        href="journey.html" data-nav-key="journey">
                         <span class="material-symbols-outlined mb-1">map</span>
                         <span class="font-label-caps text-label-caps">แผน</span>
                 </a>
                 <a class="flex flex-col items-center justify-center text-on-surface-variant/70 dark:text-surface-variant/70 px-4 py-2 hover:bg-surface-container-low transition-all"
-                        href="stories.html">
+                        href="stories.html" data-nav-key="stories">
                         <span class="material-symbols-outlined mb-1">menu_book</span><span class="font-label-caps text-label-caps">เรื่องเล่า</span>
                 </a>
         </nav>
-        <script>
-        const WEATHER_IMAGES = {
-                rain: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCKDhyiN5DjiaBIMSR34rOLIDu-mKNJ70YSiYrGJBzbRyL2yXZiN7sFYU5R8Fmk6EBmWV8Q7yoLso7XClAcEANU4hgFd89YVdrBPeOrllVh6xTkGNz3VCdzJzRgnhVpkbAs4GizoiZioJlQz08RhjnDRDKnrwZ-YpjyAjGvNQ-Is-Ael37tnmpj-lfaVTDRjYLb2pu68MJPvzzlDHDYKnhi-Rjwd9XYdmZrrjhKgcvTASN7WnWlt7T2hcCxSKm94AOrZ406O-NH96U',
-                cloudy: 'https://lh3.googleusercontent.com/aida-public/AB6AXuA2LNfTLC7nkNkgzAfwam5AM3J5nJTctMgDevP9hg8Z4tcAqzCwBk_cRGs0ldC9R6M7FjmBIliDNQXsTzVCbNLFY6dxT7fJ5Bm_D4K5UJ06rx2nnaQOhV-vicQoPRUasnkZjF1YOoUbzcy6GwHc4DY9vtm-yJK1j6L6vcDhNyvh4B0vEKqtUOcjqKLW_Hfk3YXtq9jVta4TNDXITs9DZG5UANF1i4IxDCtKD9Y8PYlxWwnPT3s4uG-FsLUFmZxVf41_C6-YK9WXMng',
-                clear: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBEKEFeUSN3KY4efwhru4RUcYSkPTs6y4lGm32XkUVELtLJaGfdkXPOo_TCQacaAivbuSb-IPwDmuIcdc4mlqf0LOdNXkQLVIrPUtM4Mt-lcXTMQyKFo3vd3FOXz14dYJOLVTIJ9cXri8NNGoPqvcR9UTyPqdlh52AlzWlyISPY_2Z4OXWAPfh-MHDvDMvkKeLeagVuXGQXEFTvJ5f14AsS7cVrZmPPWF2N1maL0ncF3PY1vYJmYeszaYhb-ZZMMBcHDNUMk5Wp1qI',
-                night: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBqlaoTrcO96G8S7svgj75vs0_ipZku6_ZcKDd1alqM-HXqSOA6q7u0tEGtVtuFD3yCyjqkG6lxDadKiStwFTG0YtvlsIcRL9RWDy0VzmEo2EswWcZIYkRCAvUCSIAYZAYMkE1BWsccabuSFXA6KC9owjJyYDt9ptAfXvdwzp_XeIJnn_4A79huccjtc7UoIOAmrSs8eqdfLQVD5DDoglTL2TnFZHBc2QkjIfQU0ccYUPbwcJfFBilVkeg35gDIUN-2rmkfS0945_8'
-        };
-        const WEATHER_COPY = {
-                rain: { icon: 'rainy', label: 'ฝนกำลังมาเยือนน่าน' },
-                cloudy: { icon: 'cloud', label: 'ท้องฟ้าน่านมีเมฆ' },
-                clear: { icon: 'clear_day', label: 'แสงใสของน่าน' },
-                night: { icon: 'nights_stay', label: 'น่านยามค่ำ' }
-        };
-        function classifyWeather(current) {
-                const code = Number(current.weather_code);
-                const rain = Number(current.rain || 0);
-                const precipitation = Number(current.precipitation || 0);
-                const cloudCover = Number(current.cloud_cover || 0);
-                if (Number(current.is_day) === 0) return 'night';
-                if (rain > 0 || precipitation > 0 || [51, 53, 55, 61, 63, 65, 66, 67, 80, 81, 82, 95, 96, 99].includes(code)) return 'rain';
-                if ([1, 2, 3, 45, 48].includes(code) || cloudCover >= 55) return 'cloudy';
-                return 'clear';
-        }
-        function applyWeather(kind, current = null) {
-                const copy = WEATHER_COPY[kind] || WEATHER_COPY.rain;
-                const image = WEATHER_IMAGES[kind] || WEATHER_IMAGES.rain;
-                const temp = current && Number.isFinite(Number(current.temperature_2m)) ? ` · ${Math.round(current.temperature_2m)}°C` : '';
-                const wind = current && Number.isFinite(Number(current.wind_speed_10m)) ? ` · Wind ${Math.round(current.wind_speed_10m)} km/h` : '';
-                const fullLabel = `${copy.label}${temp}${wind}`;
-                const heroImage = document.getElementById('weather-hero-image');
-                const heroIcon = document.getElementById('weather-icon');
-                const heroLabel = document.getElementById('weather-label');
-                const headerIcon = document.getElementById('weather-header-icon');
-                const headerLabel = document.getElementById('weather-header-label');
-                if (heroImage) heroImage.src = image;
-                if (heroIcon) heroIcon.textContent = copy.icon;
-                if (heroLabel) heroLabel.textContent = fullLabel;
-                if (headerIcon) headerIcon.textContent = copy.icon;
-                if (headerLabel) headerLabel.textContent = fullLabel;
-        }
-        async function loadNanWeather() {
-                const url = 'https://api.open-meteo.com/v1/forecast?latitude=18.7756&longitude=100.7730&current=temperature_2m,relative_humidity_2m,apparent_temperature,is_day,precipitation,rain,weather_code,cloud_cover,wind_speed_10m&timezone=Asia%2FBangkok';
-                try {
-                        const response = await fetch(url, { cache: 'no-store' });
-                        if (!response.ok) throw new Error(`Weather request failed: ${response.status}`);
-                        const data = await response.json();
-                        const current = data.current || {};
-                        applyWeather(classifyWeather(current), current);
-                } catch (error) {
-                        console.warn('Using fallback Nan weather background.', error);
-                        applyWeather('rain');
-                }
-        }
-        loadNanWeather();
-</script>
+
         
         <script src="../assets/js/app.js" defer></script>
 </body>
