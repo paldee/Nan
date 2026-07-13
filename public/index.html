@@ -3,7 +3,7 @@
 <head>
         <meta charset="utf-8" />
         <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-        <title>Nan Beyond AI - Season</title>
+        <title>เตร็ดเตร่ trade-TRE - Season</title>
         <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
         <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;700&amp;family=Playfair+Display:wght@600;700&amp;display=swap" rel="stylesheet" />
         <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet" />
@@ -130,17 +130,21 @@
 <body class="bg-background text-on-background font-body-md min-h-screen antialiased overflow-x-hidden overflow-y-auto selection:bg-primary-fixed selection:text-on-primary-fixed pb-24 md:pb-0 scroll-smooth">
         <header
                 class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4 bg-background/80 dark:bg-background/80 backdrop-blur-xl bg-background/70">
-                <a class="font-label-caps text-sm md:text-base text-primary dark:text-primary-fixed uppercase tracking-wider hover:text-primary-container transition-colors" href="index.html">Nan Beyond</a>
+                <a class="font-label-caps text-sm md:text-base text-primary dark:text-primary-fixed uppercase tracking-wider hover:text-primary-container transition-colors" href="index.html">เตร็ดเตร่</a>
                 <nav class="hidden md:flex gap-6 items-center font-label-caps text-sm uppercase tracking-wider">
                         <a class="text-primary dark:text-primary-fixed font-bold border-b-2 border-primary dark:border-primary-fixed pb-1 active:scale-95 duration-200"
-                                href="index.html">ฤดูกาล</a>
+                                href="index.html" data-i18n="navSeason">ฤดูกาล</a>
                         <a class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed transition-colors"
-                                href="pages/your-plan.html">แผนเที่ยว</a>
+                                href="pages/your-plan.html" data-i18n="navPlan">แผนเที่ยว</a>
                         <a class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed transition-colors"
-                                href="pages/stories.html">เรื่องเล่า</a>
+                                href="pages/stories.html" data-i18n="navStories">เรื่องเล่า</a>
                 </nav>
-                <div class="flex items-center gap-4 text-primary dark:text-primary-fixed"><div class="hidden lg:flex items-center gap-2 text-on-surface-variant font-data-mono text-data-mono"><span id="weather-header-icon" class="material-symbols-outlined text-primary text-[18px]">rainy</span><span id="weather-header-label">อากาศน่าน</span></div>
-                        
+                <div class="flex items-center gap-3 text-primary dark:text-primary-fixed">
+                        <button id="lang-toggle" type="button" class="inline-flex items-center gap-2 rounded-full border border-outline-variant/60 bg-surface-container-low px-3 py-1.5 text-sm font-label-caps uppercase tracking-wider text-on-surface-variant transition hover:border-primary hover:text-primary">
+                                <span data-lang-label>ไทย</span>
+                                <span class="text-[11px] opacity-70" data-lang-short>EN</span>
+                        </button>
+                        <div class="hidden lg:flex items-center gap-2 text-on-surface-variant font-data-mono text-data-mono"><span id="weather-header-icon" class="material-symbols-outlined text-primary text-[18px]">rainy</span><span id="weather-header-label" data-i18n="weatherHeaderLabel">อากาศน่าน</span></div>
                 </div>
         </header>
         <main class="min-h-screen overflow-y-auto">
@@ -153,17 +157,17 @@
                                         class="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent">
                                 </div>
                         </div>
-                        <div class="relative z-10 w-full max-w-container-max mx-auto md:w-2/3 lg:w-1/2">
+                        <div class="relative z-10 w-full max-w-container-max mx-auto md:w-2/3 lg:w-1/2 ml-2 md:ml-4 lg:ml-6">
                                 <div
                                         class="inline-flex items-center gap-2 px-3 py-1 bg-surface-container/50 glass-overlay rounded-full mb-6">
                                         <span id="weather-icon" class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1; font-size: 16px;">rainy</span>
-                                        <span id="weather-label" class="font-label-caps text-label-caps text-on-surface">ฤดูฝนเขียวชุ่ม</span>
+                                        <span id="weather-label" class="font-label-caps text-label-caps text-on-surface" data-i18n="heroBadge">ฤดูฝนเขียวชุ่ม</span>
                                 </div>
                                 <h1
-                                        class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-primary mb-4 leading-tight">
+                                        class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-primary mb-4 leading-tight" data-i18n="heroTitle">
                                         น่านในฤดูเขียว: เมืองที่หายใจไปกับภูเขาและสายฝน</h1>
-                                <p class="font-body-lg text-body-lg text-on-surface-variant mb-8 max-w-md">วางแผนเที่ยวน่านจากฤดูกาลจริง สภาพอากาศจริง และเสน่ห์ของแต่ละเดือน ตั้งแต่วัดภูมินทร์ ปัว บ่อเกลือ ดอยเสมอดาว ไปจนถึงเสาดินนาน้อย</p>
-                                <button data-page-target="pages/your-plan.html" type="button" class="bg-primary text-on-primary font-label-caps text-label-caps px-8 py-4 rounded-lg hover:bg-primary-container transition-colors shadow-sm hover:shadow-md transform hover:-translate-y-0.5 duration-200">
+                                <p class="font-body-lg text-body-lg text-on-surface-variant mb-8 max-w-md" data-i18n="heroDesc">วางแผนเที่ยวน่านจากฤดูกาลจริง สภาพอากาศจริง และเสน่ห์ของแต่ละเดือน ตั้งแต่วัดภูมินทร์ ปัว บ่อเกลือ ดอยเสมอดาว ไปจนถึงเสาดินนาน้อย</p>
+                                <button data-page-target="pages/your-plan.html" type="button" class="bg-primary text-on-primary font-label-caps text-label-caps px-8 py-4 rounded-lg hover:bg-primary-container transition-colors shadow-sm hover:shadow-md transform hover:-translate-y-0.5 duration-200" data-i18n="heroCta">
                                         วางแผนตามฤดูกาล
                                 </button>
                         </div>
@@ -219,12 +223,12 @@
                 <section class="py-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
                         <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-12">
                                 <div>
-                                        <p class="font-label-caps text-label-caps text-secondary uppercase tracking-wider mb-3">
+                                        <p class="font-label-caps text-label-caps text-secondary uppercase tracking-wider mb-3" data-i18n="seasonSectionLabel">
                                                 น่าน 12 เดือน</p>
-                                        <h2 class="font-headline-md text-headline-md text-primary">ไฮไลต์ตามฤดูกาล</h2>
+                                        <h2 class="font-headline-md text-headline-md text-primary" data-i18n="seasonSectionTitle">ไฮไลต์ตามฤดูกาล</h2>
                                 </div>
-                                <p class="font-body-md text-body-md text-on-surface-variant md:max-w-md">
-                                        แต่ละเดือนของน่านมีจังหวะไม่เหมือนกัน ใช้ไกด์นี้เลือก mood, route และ local experience ให้เหมาะกับช่วงเดินทางของคุณ</p>
+                                <p class="font-body-md text-body-md text-on-surface-variant md:max-w-md" data-i18n="seasonSectionDesc">
+                                        แต่ละเดือนของน่านมีจังหวะไม่เหมือนกัน ใช้คู่มือนี้เลือกอารมณ์ เส้นทาง และประสบการณ์ท้องถิ่นให้เหมาะกับช่วงเดินทางของคุณ</p>
                         </div>
                         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-gutter">
                                 <article class="rounded-xl border border-outline-variant/30 bg-surface-container-low p-5">
@@ -288,18 +292,42 @@
                                         <p class="font-body-md text-body-md text-on-surface-variant">ตื่นเช้าเพื่อจุดชมวิว อากาศเย็น และภาพฤดูหนาวคลาสสิกของน่าน</p>
                                 </article>
                         </div>
-                        <p class="mt-8 font-data-mono text-data-mono text-on-surface-variant">
+                        <p class="mt-8 font-data-mono text-data-mono text-on-surface-variant" data-i18n="sourcesNote">
                                 ข้อมูลสถานที่และเทศกาลอ้างอิงจาก ททท. จังหวัดน่าน, 5 Must Do In Nan และข้อมูลอากาศจริงจาก Open-Meteo
                         </p>
                 </section>
                 <!-- Hidden Gem Spotlight -->
                 <section class="py-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
                         <div class="flex items-center justify-between mb-12">
-                                <h2 class="font-headline-md text-headline-md text-primary">Hidden Gem Spotlight</h2>
+                                <h2 class="font-headline-md text-headline-md text-primary" data-i18n="spotlightHeading">จุดเด่นที่ซ่อนอยู่</h2>
                                 <a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors flex items-center gap-1"
-                                        href="pages/stories.html">VIEW ALL <span class="material-symbols-outlined"
+                                        href="pages/stories.html" data-i18n="viewAll">ดูทั้งหมด <span class="material-symbols-outlined"
                                                 style="font-size: 16px;">arrow_forward</span></a>
                         </div>
+                        <section class="mb-16 grid gap-6 md:grid-cols-3">
+                                <a href="https://thai.tourismthailand.org/Destinations/Provinces/%E0%B8%99%E0%B9%88%E0%B8%B2%E0%B8%99/108" target="_blank" rel="noreferrer" class="group overflow-hidden rounded-[24px] border border-outline-variant/30 bg-surface-container-low shadow-sm">
+                                        <img class="h-40 w-full object-cover transition duration-500 group-hover:scale-105" src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=800&q=80" alt="Nan province landscape" />
+                                        <div class="p-5">
+                                                <p class="font-label-caps text-label-caps text-secondary uppercase tracking-wider" data-i18n="sourcesHeading">Official Nan tourism references</p>
+                                                <h3 class="mt-2 font-headline-sm text-headline-sm text-primary">Nan Province</h3>
+                                                <p class="mt-2 font-body-md text-body-md text-on-surface-variant">Explore Nan’s landscapes, culture, and seasonal highlights from the official tourism guide.</p>
+                                        </div>
+                                </a>
+                                <a href="https://thai.tourismthailand.org/Articles/5-must-do-in-nan" target="_blank" rel="noreferrer" class="group overflow-hidden rounded-[24px] border border-outline-variant/30 bg-surface-container-low shadow-sm">
+                                        <img class="h-40 w-full object-cover transition duration-500 group-hover:scale-105" src="https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=800&q=80" alt="Nan scenic route" />
+                                        <div class="p-5">
+                                                <h3 class="font-headline-sm text-headline-sm text-primary">5 Must Do in Nan</h3>
+                                                <p class="mt-2 font-body-md text-body-md text-on-surface-variant">A curated list of must-see experiences that match the province’s best seasonal moments.</p>
+                                        </div>
+                                </a>
+                                <a href="https://www.facebook.com/tat.nan.office/" target="_blank" rel="noreferrer" class="group overflow-hidden rounded-[24px] border border-outline-variant/30 bg-surface-container-low shadow-sm">
+                                        <img class="h-40 w-full object-cover transition duration-500 group-hover:scale-105" src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=800&q=80" alt="Nan local culture" />
+                                        <div class="p-5">
+                                                <h3 class="font-headline-sm text-headline-sm text-primary">TAT Nan</h3>
+                                                <p class="mt-2 font-body-md text-body-md text-on-surface-variant">Follow local updates from the official Nan tourism office for events and travel tips.</p>
+                                        </div>
+                                </a>
+                        </section>
                         <div
                                 class="group relative rounded-[24px] overflow-hidden bg-surface-container-lowest h-[500px] md:h-[600px] cursor-pointer">
                                 <img class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
@@ -313,23 +341,22 @@
                                                 class="inline-flex items-center gap-2 px-3 py-1.5 bg-primary/90 text-on-primary rounded-full glass-overlay">
                                                 <span class="material-symbols-outlined"
                                                         style="font-variation-settings: 'FILL' 1; font-size: 14px;">star</span>
-                                                <span data-spotlight-badge class="font-label-caps text-label-caps">เหมาะที่สุดในเดือนสิงหาคม</span>
+                                                <span data-spotlight-badge class="font-label-caps text-label-caps" data-i18n="spotlightBadge">เหมาะที่สุดในเดือนสิงหาคม</span>
                                         </div>
                                 </div>
                                 <div class="absolute bottom-0 left-0 w-full p-8 md:p-12 z-10 text-on-primary">
-                                        <p data-spotlight-location class="font-label-caps text-label-caps text-primary-fixed-dim mb-3">สะปัน,
+                                        <p data-spotlight-location class="font-label-caps text-label-caps text-primary-fixed-dim mb-3" data-i18n="spotlightLocation">สะปัน,
                                                 น่าน</p>
                                         <h3
-                                                data-spotlight-title class="font-display-lg-mobile md:font-headline-md text-display-lg-mobile md:text-headline-md mb-4 leading-tight">
+                                                data-spotlight-title class="font-display-lg-mobile md:font-headline-md text-display-lg-mobile md:text-headline-md mb-4 leading-tight" data-i18n="spotlightTitle">
                                                 โฮมสเตย์ริมน้ำตกกลางหุบเขาสะปัน</h3>
-                                        <p data-spotlight-copy class="font-body-md text-body-md text-on-primary/80 max-w-2xl mb-6">ช่วงฤดูฝนคือเวลาที่หุบเขาเขียวที่สุด เหมาะกับการพักช้า ๆ ถ่ายภาพหมอก และสัมผัสวิถีชุมชนบ่อเกลือ-สะปัน</p>
+                                        <p data-spotlight-copy class="font-body-md text-body-md text-on-primary/80 max-w-2xl mb-6" data-i18n="spotlightCopy">ช่วงฤดูฝนคือเวลาที่หุบเขาเขียวที่สุด เหมาะกับการพักช้า ๆ ถ่ายภาพหมอก และสัมผัสวิถีชุมชนบ่อเกลือ-สะปัน</p>
                                         <div class="flex items-center justify-between">
                                                 <div class="flex gap-4">
                                                         <span
-                                                                class="px-3 py-1 border border-on-primary/30 rounded-full font-label-caps text-label-caps text-on-primary/80">NATURE</span>
+                                                                class="px-3 py-1 border border-on-primary/30 rounded-full font-label-caps text-label-caps text-on-primary/80" data-i18n="spotlightTag1">ธรรมชาติ</span>
                                                         <span
-                                                                class="px-3 py-1 border border-on-primary/30 rounded-full font-label-caps text-label-caps text-on-primary/80">SLOW
-                                                                LIVING</span>
+                                                                class="px-3 py-1 border border-on-primary/30 rounded-full font-label-caps text-label-caps text-on-primary/80" data-i18n="spotlightTag2">ชีวิตช้า ๆ</span>
                                                 </div>
                                                 <div
                                                         class="w-10 h-10 rounded-full bg-surface-container-lowest/10 glass-overlay flex items-center justify-center transform group-hover:bg-primary-fixed group-hover:text-primary transition-all duration-300">
@@ -362,61 +389,6 @@
                         <span class="material-symbols-outlined mb-1">menu_book</span><span class="font-label-caps text-label-caps">เรื่องเล่า</span>
                 </a>
         </nav>
-        <script>
-        const WEATHER_IMAGES = {
-                rain: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCKDhyiN5DjiaBIMSR34rOLIDu-mKNJ70YSiYrGJBzbRyL2yXZiN7sFYU5R8Fmk6EBmWV8Q7yoLso7XClAcEANU4hgFd89YVdrBPeOrllVh6xTkGNz3VCdzJzRgnhVpkbAs4GizoiZioJlQz08RhjnDRDKnrwZ-YpjyAjGvNQ-Is-Ael37tnmpj-lfaVTDRjYLb2pu68MJPvzzlDHDYKnhi-Rjwd9XYdmZrrjhKgcvTASN7WnWlt7T2hcCxSKm94AOrZ406O-NH96U',
-                cloudy: 'https://lh3.googleusercontent.com/aida-public/AB6AXuA2LNfTLC7nkNkgzAfwam5AM3J5nJTctMgDevP9hg8Z4tcAqzCwBk_cRGs0ldC9R6M7FjmBIliDNQXsTzVCbNLFY6dxT7fJ5Bm_D4K5UJ06rx2nnaQOhV-vicQoPRUasnkZjF1YOoUbzcy6GwHc4DY9vtm-yJK1j6L6vcDhNyvh4B0vEKqtUOcjqKLW_Hfk3YXtq9jVta4TNDXITs9DZG5UANF1i4IxDCtKD9Y8PYlxWwnPT3s4uG-FsLUFmZxVf41_C6-YK9WXMng',
-                clear: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBEKEFeUSN3KY4efwhru4RUcYSkPTs6y4lGm32XkUVELtLJaGfdkXPOo_TCQacaAivbuSb-IPwDmuIcdc4mlqf0LOdNXkQLVIrPUtM4Mt-lcXTMQyKFo3vd3FOXz14dYJOLVTIJ9cXri8NNGoPqvcR9UTyPqdlh52AlzWlyISPY_2Z4OXWAPfh-MHDvDMvkKeLeagVuXGQXEFTvJ5f14AsS7cVrZmPPWF2N1maL0ncF3PY1vYJmYeszaYhb-ZZMMBcHDNUMk5Wp1qI',
-                night: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBqlaoTrcO96G8S7svgj75vs0_ipZku6_ZcKDd1alqM-HXqSOA6q7u0tEGtVtuFD3yCyjqkG6lxDadKiStwFTG0YtvlsIcRL9RWDy0VzmEo2EswWcZIYkRCAvUCSIAYZAYMkE1BWsccabuSFXA6KC9owjJyYDt9ptAfXvdwzp_XeIJnn_4A79huccjtc7UoIOAmrSs8eqdfLQVD5DDoglTL2TnFZHBc2QkjIfQU0ccYUPbwcJfFBilVkeg35gDIUN-2rmkfS0945_8'
-        };
-        const WEATHER_COPY = {
-                rain: { icon: 'rainy', label: 'ฝนกำลังมาเยือนน่าน' },
-                cloudy: { icon: 'cloud', label: 'ท้องฟ้าน่านมีเมฆ' },
-                clear: { icon: 'clear_day', label: 'แสงใสของน่าน' },
-                night: { icon: 'nights_stay', label: 'น่านยามค่ำ' }
-        };
-        function classifyWeather(current) {
-                const code = Number(current.weather_code);
-                const rain = Number(current.rain || 0);
-                const precipitation = Number(current.precipitation || 0);
-                const cloudCover = Number(current.cloud_cover || 0);
-                if (Number(current.is_day) === 0) return 'night';
-                if (rain > 0 || precipitation > 0 || [51, 53, 55, 61, 63, 65, 66, 67, 80, 81, 82, 95, 96, 99].includes(code)) return 'rain';
-                if ([1, 2, 3, 45, 48].includes(code) || cloudCover >= 55) return 'cloudy';
-                return 'clear';
-        }
-        function applyWeather(kind, current = null) {
-                const copy = WEATHER_COPY[kind] || WEATHER_COPY.rain;
-                const image = WEATHER_IMAGES[kind] || WEATHER_IMAGES.rain;
-                const temp = current && Number.isFinite(Number(current.temperature_2m)) ? ` · ${Math.round(current.temperature_2m)}°C` : '';
-                const wind = current && Number.isFinite(Number(current.wind_speed_10m)) ? ` · Wind ${Math.round(current.wind_speed_10m)} km/h` : '';
-                const fullLabel = `${copy.label}${temp}${wind}`;
-                const heroImage = document.getElementById('weather-hero-image');
-                const heroIcon = document.getElementById('weather-icon');
-                const heroLabel = document.getElementById('weather-label');
-                const headerIcon = document.getElementById('weather-header-icon');
-                const headerLabel = document.getElementById('weather-header-label');
-                if (heroImage) heroImage.src = image;
-                if (heroIcon) heroIcon.textContent = copy.icon;
-                if (heroLabel) heroLabel.textContent = fullLabel;
-                if (headerIcon) headerIcon.textContent = copy.icon;
-                if (headerLabel) headerLabel.textContent = fullLabel;
-        }
-        async function loadNanWeather() {
-                const url = 'https://api.open-meteo.com/v1/forecast?latitude=18.7756&longitude=100.7730&current=temperature_2m,relative_humidity_2m,apparent_temperature,is_day,precipitation,rain,weather_code,cloud_cover,wind_speed_10m&timezone=Asia%2FBangkok';
-                try {
-                        const response = await fetch(url, { cache: 'no-store' });
-                        if (!response.ok) throw new Error(`Weather request failed: ${response.status}`);
-                        const data = await response.json();
-                        const current = data.current || {};
-                        applyWeather(classifyWeather(current), current);
-                } catch (error) {
-                        console.warn('Using fallback Nan weather background.', error);
-                        applyWeather('rain');
-                }
-        }
-        loadNanWeather();
-</script>
                 <script src="assets/js/app.js" defer></script>
 </body>
 </html>

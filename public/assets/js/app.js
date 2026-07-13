@@ -75,6 +75,185 @@ const monthSpotlights = {
   }
 };
 
+const translations = {
+  th: {
+    langToggle: "ไทย",
+    langToggleShort: "EN",
+    navSeason: "ฤดูกาล",
+    navPlan: "แผนเที่ยว",
+    navStories: "เรื่องเล่า",
+    weatherHeaderLabel: "อากาศน่าน",
+    weatherRainy: "ฝนตก",
+    weatherCloudy: "มีเมฆ",
+    weatherClear: "แจ่มใส",
+    weatherNight: "กลางคืน",
+    heroBadge: "ฤดูฝนเขียวชุ่ม",
+    heroTitle: "น่านในฤดูเขียว: เมืองที่หายใจไปกับภูเขาและสายฝน",
+    heroDesc: "วางแผนเที่ยวน่านจากฤดูกาลจริง สภาพอากาศจริง และเสน่ห์ของแต่ละเดือน ตั้งแต่วัดภูมินทร์ ปัว บ่อเกลือ ดอยเสมอดาว ไปจนถึงเสาดินนาน้อย",
+    heroCta: "วางแผนตามฤดูกาล",
+    seasonSectionLabel: "น่าน 12 เดือน",
+    seasonSectionTitle: "ไฮไลต์ตามฤดูกาล",
+    seasonSectionDesc: "แต่ละเดือนของน่านมีจังหวะไม่เหมือนกัน ใช้คู่มือนี้เลือกอารมณ์ เส้นทาง และประสบการณ์ท้องถิ่นให้เหมาะกับช่วงเดินทางของคุณ",
+    planPageTitle: "แผนเที่ยว",
+    planPageIntro: "เลือกเดือน ความสนใจ และจังหวะการเดินทางของคุณ ระบบจะผสานฤดูกาล อากาศจริง Hidden Gems และเรื่องเล่าท้องถิ่นให้กลายเป็นแผนเที่ยวที่เหมาะกับช่วงเวลานั้น",
+    planSectionTimeTitle: "เดินทางเดือนไหน",
+    planSectionTimeDesc: "เลือกเดือนที่อยากเดินทาง เพื่อให้คำแนะนำสอดคล้องกับฤดูกาลและบรรยากาศจริงของน่าน",
+    planSectionVibeTitle: "โหมดการเดินทาง",
+    planSectionVibeDesc: "เลือกสิ่งที่คุณชอบเพื่อให้แผนของคุณชวนสนใจมากขึ้น",
+    planSectionPaceTitle: "จังหวะการเดินทาง",
+    planSectionPaceDesc: "กำหนดความเร็วและความลึกของการเดินทางให้เข้ากับช่วงเวลาของคุณ",
+    storyPageTitle: "น่าน 12 เดือน: คุณอยากพบน่านในจังหวะไหน",
+    storyPageIntro: "สำรวจบรรยากาศที่เปลี่ยนไปในแต่ละเดือน ตั้งแต่ลมหนาว ดอกไม้ วัฒนธรรมเมืองเก่า นาข้าวสีเขียว ไปจนถึงทะเลหมอกปลายปี",
+    journeyPageBadge: "แผนที่สร้างให้คุณ",
+    journeyPageTitle: "แผนเที่ยวน่าน 3 วันในฤดูเขียว",
+    journeyPageIntro: "เส้นทางที่ปรับตามฤดูกาลและสภาพอากาศจริง ผสานธรรมชาติสีเขียว วิถีชุมชน และมรดกวัฒนธรรมของน่าน",
+    spotlightHeading: "จุดเด่นที่ซ่อนอยู่",
+    viewAll: "ดูทั้งหมด",
+    spotlightBadge: "เหมาะที่สุดในเดือนสิงหาคม",
+    spotlightLocation: "สะปัน, น่าน",
+    spotlightTitle: "โฮมสเตย์ริมน้ำตกกลางหุบเขาสะปัน",
+    spotlightCopy: "ช่วงฤดูฝนคือเวลาที่หุบเขาเขียวที่สุด เหมาะกับการพักช้า ๆ ถ่ายภาพหมอก และสัมผัสวิถีชุมชนบ่อเกลือ-สะปัน",
+    spotlightTag1: "ธรรมชาติ",
+    spotlightTag2: "ชีวิตช้า ๆ",
+    sourcesHeading: "แหล่งข้อมูลและอ้างอิง",
+    sourcesIntro: "ข้อมูลสถานที่และเทศกาลอ้างอิงจากแหล่งที่เชื่อถือได้ของจังหวัดน่านและทางการท่องเที่ยว",
+    sourcesNote: "ข้อมูลสถานที่และเทศกาลอ้างอิงจาก ททท. จังหวัดน่าน, 5 Must Do In Nan และข้อมูลอากาศจริงจาก Open-Meteo"
+  },
+  en: {
+    langToggle: "EN",
+    langToggleShort: "TH",
+    navSeason: "Season",
+    navPlan: "Plan",
+    navStories: "Stories",
+    weatherHeaderLabel: "Nan Weather",
+    weatherRainy: "Rainy",
+    weatherCloudy: "Cloudy",
+    weatherClear: "Clear",
+    weatherNight: "Night",
+    heroBadge: "Lush Rainy Season",
+    heroTitle: "August in Nan: Where the Earth Breathes Green",
+    heroDesc: "Crafting Your Nan Journey",
+    heroCta: "PLAN YOUR NAN",
+    seasonSectionLabel: "August in Nan: Where the Earth Breathes Green",
+    seasonSectionTitle: "Seasonal highlights",
+    seasonSectionDesc: "Each month in Nan has a different rhythm. Use this guide to choose the mood, route, and local experience that fits your travel window.",
+    planPageTitle: "Crafting Your Nan Journey",
+    planPageIntro: "Choose your month, interests, and pace of travel. The system blends seasonality, real weather, hidden gems, and local stories into a trip plan that fits that moment.",
+    planSectionTimeTitle: "When",
+    planSectionTimeDesc: "Select the month for your journey to experience the unique seasonal rhythms of Nan.",
+    planSectionVibeTitle: "The Vibe",
+    planSectionVibeDesc: "Choose the experiences that speak to you most and shape your days.",
+    planSectionPaceTitle: "Dynamics",
+    planSectionPaceDesc: "Define the rhythm of your trip and who you're sharing it with.",
+    storyPageTitle: "August in Nan: Where the Earth Breathes Green",
+    storyPageIntro: "Crafting Your Nan Journey",
+    journeyPageBadge: "A journey map made for you",
+    journeyPageTitle: "Your 3 Day-Emerald Journey",
+    journeyPageIntro: "A route shaped by season and real weather, blending green nature, local communities, and the cultural heritage of Nan.",
+    spotlightHeading: "Hidden Gem Spotlight",
+    viewAll: "VIEW ALL",
+    spotlightBadge: "Best in August",
+    spotlightLocation: "Sapan, Nan",
+    spotlightTitle: "The Whispering Waterfall Homestay",
+    spotlightCopy: "Tucked away in the misty valleys, this secluded retreat offers an unparalleled connection to nature during the peak of the rainy season.",
+    spotlightTag1: "NATURE",
+    spotlightTag2: "SLOW LIVING",
+    sourcesHeading: "Official Nan tourism references",
+    sourcesIntro: "A curated set of official and trusted sources for planning your Nan journey.",
+    sourcesNote: "Place and festival references are drawn from TAT Nan, 5 Must Do In Nan, and live weather from Open-Meteo."
+  }
+};
+
+function applyLanguage(lang = "th") {
+  const safeLang = translations[lang] ? lang : "th";
+  const locale = translations[safeLang];
+  document.documentElement.lang = safeLang === "en" ? "en" : "th";
+  document.documentElement.setAttribute("data-lang", safeLang);
+  document.body?.setAttribute("data-lang", safeLang);
+
+  document.querySelectorAll("[data-i18n]").forEach((element) => {
+    const key = element.dataset.i18n;
+    if (locale[key]) element.textContent = locale[key];
+  });
+
+  const toggle = document.getElementById("lang-toggle");
+  if (toggle) {
+    const label = toggle.querySelector("[data-lang-label]");
+    const shortLabel = toggle.querySelector("[data-lang-short]");
+    if (label) label.textContent = safeLang === "en" ? "EN" : "ไทย";
+    if (shortLabel) shortLabel.textContent = safeLang === "en" ? "TH" : "EN";
+  }
+
+  const weatherLabel = document.getElementById("weather-header-label");
+  if (weatherLabel && locale.weatherHeaderLabel) weatherLabel.textContent = locale.weatherHeaderLabel;
+}
+
+function setupLanguageToggle() {
+  const toggle = document.getElementById("lang-toggle");
+  if (!toggle) return;
+
+  toggle.addEventListener("click", () => {
+    const nextLang = document.documentElement.getAttribute("data-lang") === "en" ? "th" : "en";
+    localStorage.setItem("nanLanguage", nextLang);
+    applyLanguage(nextLang);
+    loadNanWeather();
+  });
+}
+
+function applyWeather(kind, current = null) {
+  const lang = document.documentElement.getAttribute("data-lang") === "en" ? "en" : "th";
+  const locale = translations[lang] || translations.th;
+  const weatherIcons = {
+    rain: "rainy",
+    cloudy: "cloud",
+    clear: "clear_day",
+    night: "nights_stay"
+  };
+  const weatherKeys = {
+    rain: "weatherRainy",
+    cloudy: "weatherCloudy",
+    clear: "weatherClear",
+    night: "weatherNight"
+  };
+  const copy = weatherIcons[kind] ? weatherIcons[kind] : "rainy";
+  const label = locale[weatherKeys[kind]] || locale.weatherRainy || "Rainy";
+  const temp = current && Number.isFinite(Number(current.temperature_2m)) ? ` · ${Math.round(current.temperature_2m)}°C` : "";
+  const wind = current && Number.isFinite(Number(current.wind_speed_10m)) ? ` · Wind ${Math.round(current.wind_speed_10m)} km/h` : "";
+  const fullLabel = `${label}${temp}${wind}`;
+
+  const heroImage = document.getElementById("weather-hero-image");
+  const heroIcon = document.getElementById("weather-icon");
+  const heroLabel = document.getElementById("weather-label");
+  const headerIcon = document.getElementById("weather-header-icon");
+  const headerLabel = document.getElementById("weather-header-label");
+
+  if (heroImage) heroImage.src = `https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1600&q=80`;
+  if (heroIcon) heroIcon.textContent = copy;
+  if (heroLabel) heroLabel.textContent = fullLabel;
+  if (headerIcon) headerIcon.textContent = copy;
+  if (headerLabel) headerLabel.textContent = fullLabel;
+}
+
+async function loadNanWeather() {
+  const url = "https://api.open-meteo.com/v1/forecast?latitude=18.7756&longitude=100.7730&current=temperature_2m,weather_code,wind_speed_10m&timezone=Asia%2FBangkok";
+  try {
+    const response = await fetch(url, { cache: "no-store" });
+    if (!response.ok) throw new Error(`Weather request failed: ${response.status}`);
+    const data = await response.json();
+    const current = data.current || {};
+    const code = Number(current.weather_code || 0);
+    const hour = new Date().getHours();
+    let kind = "rain";
+    if (hour >= 20 || hour < 5) kind = "night";
+    else if ([1, 2, 3, 45, 48].includes(code)) kind = "cloudy";
+    else if ([0, 100].includes(code)) kind = "clear";
+    applyWeather(kind, current);
+  } catch (error) {
+    console.warn("Using fallback Nan weather background.", error);
+    applyWeather("rain");
+  }
+}
+
 function gotoPage(url) {
   document.body.classList.add("page-leaving");
   window.setTimeout(() => {
@@ -212,8 +391,15 @@ function renderGeneratedTrip() {
 
 document.addEventListener("DOMContentLoaded", () => {
   document.body.classList.add("page-ready");
+  const savedLang = localStorage.getItem("nanLanguage") || "th";
+  applyLanguage(savedLang);
+  loadNanWeather();
   setActiveNav();
   setupMonthNavigator();
+  setupLanguageToggle();
+  setInterval(() => {
+    loadNanWeather();
+  }, 600000);
 
   document.querySelectorAll("[data-page-target]").forEach((button) => {
     button.addEventListener("click", () => gotoPage(button.dataset.pageTarget));

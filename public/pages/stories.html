@@ -3,7 +3,7 @@
 <head>
         <meta charset="utf-8" />
         <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-        <title>Nan Beyond AI - Twelve Months</title>
+        <title>เตร็ดเตร่ trade-TRE - Twelve Months</title>
         <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
         <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;700&amp;family=Playfair+Display:wght@600;700&amp;display=swap" rel="stylesheet" />
         <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet" />
@@ -130,17 +130,21 @@
 <body class="bg-background text-on-background font-body-md min-h-screen antialiased overflow-x-hidden overflow-y-auto selection:bg-primary-fixed selection:text-on-primary-fixed pb-24 md:pb-0 scroll-smooth">
         <header
                 class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4 bg-background/80 dark:bg-background/80 backdrop-blur-xl bg-background/70">
-                <a class="font-label-caps text-sm md:text-base text-primary dark:text-primary-fixed uppercase tracking-wider hover:text-primary-container transition-colors" href="../index.html">Nan Beyond</a>
+                <a class="font-label-caps text-sm md:text-base text-primary dark:text-primary-fixed uppercase tracking-wider hover:text-primary-container transition-colors" href="../index.html">เตร็ดเตร่</a>
                 <nav class="hidden md:flex gap-6 items-center font-label-caps text-sm uppercase tracking-wider">
                         <a class="text-primary dark:text-primary-fixed font-bold border-b-2 border-primary dark:border-primary-fixed pb-1 active:scale-95 duration-200"
-                                href="../index.html">ฤดูกาล</a>
+                                href="../index.html" data-i18n="navSeason">ฤดูกาล</a>
                         <a class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed transition-colors"
-                                href="your-plan.html">แผนเที่ยว</a>
+                                href="your-plan.html" data-i18n="navPlan">แผนเที่ยว</a>
                         <a class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed transition-colors"
-                                href="stories.html">เรื่องเล่า</a>
+                                href="stories.html" data-i18n="navStories">เรื่องเล่า</a>
                 </nav>
-                <div class="flex items-center gap-4 text-primary dark:text-primary-fixed"><div class="hidden lg:flex items-center gap-2 text-on-surface-variant font-data-mono text-data-mono"><span id="weather-header-icon" class="material-symbols-outlined text-primary text-[18px]">rainy</span><span id="weather-header-label">อากาศน่าน</span></div>
-                        
+                <div class="flex items-center gap-3 text-primary dark:text-primary-fixed">
+                        <button id="lang-toggle" type="button" class="inline-flex items-center gap-2 rounded-full border border-outline-variant/60 bg-surface-container-low px-3 py-1.5 text-sm font-label-caps uppercase tracking-wider text-on-surface-variant transition hover:border-primary hover:text-primary">
+                                <span data-lang-label>ไทย</span>
+                                <span class="text-[11px] opacity-70" data-lang-short>EN</span>
+                        </button>
+                        <div class="flex items-center gap-2 text-on-surface-variant font-data-mono text-data-mono"><span id="weather-header-icon" class="material-symbols-outlined text-primary text-[18px]">rainy</span><span id="weather-header-label" data-i18n="weatherHeaderLabel">อากาศน่าน</span></div>
                 </div>
         </header>
         <main class="min-h-screen overflow-y-auto">
@@ -148,11 +152,11 @@
                 <!-- Header Section -->
                 <section class="mb-section-gap text-center md:text-left mt-12 md:mt-24">
                         <h1
-                                class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-primary mb-4 md:w-2/3">
-                                น่าน 12 เดือน: คุณอยากพบน่านในจังหวะไหน
+                                class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-primary mb-4 md:w-2/3" data-i18n="storyPageTitle">
+                                Twelve Months, Twelve Souls. Which Nan is Yours?
                         </h1>
-                        <p class="font-body-lg text-body-lg text-on-surface-variant md:w-1/2">
-                                สำรวจบรรยากาศที่เปลี่ยนไปในแต่ละเดือน ตั้งแต่ลมหนาว ดอกไม้ วัฒนธรรมเมืองเก่า นาข้าวสีเขียว ไปจนถึงทะเลหมอกปลายปี
+                        <p class="font-body-lg text-body-lg text-on-surface-variant md:w-1/2" data-i18n="storyPageIntro">
+                                August in Nan: Where the Earth Breathes Green
                         </p>
                 </section>
                 <!-- Seasonal Grid / Bento Layout -->
